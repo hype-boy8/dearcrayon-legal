@@ -109,11 +109,11 @@ def page(lang, name):
 <meta name="twitter:title" content="{H.escape(title)}">
 <meta name="twitter:description" content="{H.escape(desc)}">
 <meta name="twitter:image" content="{BASE}assets/og-brand-v74.png">
-<meta name="theme-color" content="#fffdf7" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#29221e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fffdf7">
+<meta name="color-scheme" content="light">
 <link rel="icon" type="image/png" href="{p}assets/favicon.png">
 <link rel="apple-touch-icon" href="{p}assets/icon-180.png">
-<link rel="stylesheet" href="{p}assets/site.css?v=74">
+<link rel="stylesheet" href="{p}assets/site.css?v=75">
 <script src="{p}assets/site.js?v=74" defer></script>
 </head>
 <body class="{'landing' if name == 'index' else 'legal-page'}">
@@ -156,19 +156,12 @@ def privacy_md(lang):
 
 
 CSS = r''':root {
-  color-scheme: light dark;
+  color-scheme: only light;
   --bg: #FFFFFF; --fg: #1A1C20; --muted: #555D6D; --subtle: #868B94;
   --line: #DCDEE3; --soft: #F7F8F9; --soft2: #F3F4F5;
   --brand: #FE644A; --brand-ink: #BA3620; --brand-weak: #FFF2EF; --brand-line: #FFD4CB;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #141518; --fg: #EEEFF1; --muted: #B0B3BA; --subtle: #868B94;
-    --line: #2E333B; --soft: #1B1D21; --soft2: #23262B;
-    --brand: #FE644A; --brand-ink: #FE917C; --brand-weak: rgba(254,100,74,.12); --brand-line: rgba(254,100,74,.32);
-  }
-  .brand img { background: #FFFFFF; border-radius: 12px; padding: 4px 8px; }
-}
+
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
@@ -279,10 +272,7 @@ footer a { color: inherit; }
 .play:hover { background: #872818; }
 .play-note { margin-top: 12px; font-size: 14px; color: var(--subtle); }
 .receive { background: var(--soft); border: 1px solid var(--line); border-radius: 18px; padding: 20px 20px 10px; }
-@media (prefers-color-scheme: dark) {
-  .brand img, .hero-logo { background: #FFFFFF; border-radius: 14px; padding: 6px 10px; }
-  .play { box-shadow: none; }
-}
+
 '''
 
 if __name__ == '__main__':

@@ -15,7 +15,7 @@ Until the public listing exists, PLAY_AVAILABLE=False in tools/landing.py displa
 ## Brand refresh 2026-10-19
 
 - Approved Dear Crayon logo, crayon planet and existing illustration icons. No child photos or user records included.
-- Warm paper/cocoa/coral design, responsive layout, light/dark appearance.
+- Warm paper/cocoa/coral design, responsive layout, fixed light paper appearance regardless of system dark mode (user decision).
 - Native disclosure language picker with six native language names, current-language check, Escape/outside-click close. Switching preserves the current page type. No flags or automatic redirection.
 - Home introduces drawings, voice and books; book-receiving instructions are expandable. Legal URLs and legal document body content remain unchanged.
 - Localized page/share titles and descriptions, Open Graph/Twitter metadata. New 1200×630 brand preview: assets/og-brand-v74.png. Its source is tools/og-preview.html; render that at 1200×630 when changing the image.
