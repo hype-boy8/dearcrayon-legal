@@ -17,6 +17,7 @@ MD_TITLE = {
     'de': 'Datenschutzerklärung von Dear Crayon',
     'fr': 'Politique de confidentialité de Dear Crayon',
     'es': 'Política de privacidad de Dear Crayon',
+    'ja': 'Dear Crayon プライバシーポリシー',
 }
 
 
@@ -184,6 +185,11 @@ body {
   font-size: 16px; line-height: 1.7; overflow-wrap: anywhere;
 }
 :lang(ko) { word-break: keep-all; }
+:lang(ja) {
+  font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP',
+               'Yu Gothic', 'Meiryo', 'Segoe UI', Roboto, sans-serif;
+  line-break: strict;
+}
 .wrap { max-width: 720px; margin: 0 auto; padding: 24px 16px 72px; }
 @media (min-width: 600px) { .wrap { padding: 40px 24px 96px; } }
 
