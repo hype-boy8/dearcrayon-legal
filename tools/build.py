@@ -12,7 +12,7 @@ from content import L, LANGS, BASE, MAIL, PLAY  # noqa: E402
 SITE, APP_LEGAL = sys.argv[1], sys.argv[2]
 PAGES = ['index', 'privacy', 'terms', 'delete']
 MD_TITLE = {
-    'ko': '디어 크레용 개인정보 처리방침',
+    'ko': 'Dear Crayon 개인정보 처리방침',
     'en': 'Dear Crayon Privacy Policy',
     'de': 'Datenschutzerklärung von Dear Crayon',
     'fr': 'Politique de confidentialité de Dear Crayon',
