@@ -1,0 +1,24 @@
+# Dear Crayon public pages
+
+GitHub Pages: https://hype-boy8.github.io/dearcrayon-legal/
+
+## Build
+
+`python3 -I tools/build.py /absolute/path/to/dearcrayon-legal`
+
+The optional second argument is the app assets/legal directory. Omit it for web-only design changes. Legal copy stays in tools/content.py; landing design and six-language marketing copy live in tools/landing.py. Do not edit generated HTML/CSS directly.
+
+## Store launch
+
+Until the public listing exists, PLAY_AVAILABLE=False in tools/landing.py displays a launch notice instead of sending visitors to a missing page. After the public listing is confirmed, set it to True, rebuild and deploy. The existing package-specific Google Play URL remains in tools/content.py. Update COPY[language]['receiveNote'] at launch to remove the pre-launch qualification.
+
+## Brand refresh 2026-10-19
+
+- Approved Dear Crayon logo, crayon planet and existing illustration icons. No child photos or user records included.
+- Warm paper/cocoa/coral design, responsive layout, light/dark appearance.
+- Native disclosure language picker with six native language names, current-language check, Escape/outside-click close. Switching preserves the current page type. No flags or automatic redirection.
+- Home introduces drawings, voice and books; book-receiving instructions are expandable. Legal URLs and legal document body content remain unchanged.
+- Localized page/share titles and descriptions, Open Graph/Twitter metadata. New 1200×630 brand preview: assets/og-brand-v74.png. Its source is tools/og-preview.html; render that at 1200×630 when changing the image.
+- NanumSquareRound/Nunito font licenses are retained alongside self-hosted font files. Japanese uses the device's Japanese typeface.
+- Verified six languages at 390px; 320px and desktop edge cases, light/dark views, language selection, Escape and guide opening. Static verification covers local assets and 24 page links; legal body compared against the previous commit.
+- Sharing apps may retain the previous preview in their cache. Site titles and metadata change on deployment, but previously sent messages do not necessarily refresh.

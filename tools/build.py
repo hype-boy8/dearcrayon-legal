@@ -8,8 +8,10 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from content import L, LANGS, BASE, MAIL, PLAY  # noqa: E402
+from landing import COPY, landing, CSS as BRAND_CSS, JS as BRAND_JS
 
-SITE, APP_LEGAL = sys.argv[1], sys.argv[2]
+SITE = sys.argv[1]
+APP_LEGAL = sys.argv[2] if len(sys.argv) > 2 else None
 PAGES = ['index', 'privacy', 'terms', 'delete']
 MD_TITLE = {
     'ko': 'Dear Crayon 개인정보 처리방침',
@@ -61,22 +63,8 @@ def page(lang, name):
     file = f'{name}.html'
     if name == 'index':
         ix = c['index']
-        title, desc = ix['title'], ix['desc']
-        body = [
-            '<div class="hero">',
-            f'<img class="hero-logo" src="{p}assets/logo.png" alt="{c["name"]}" width="240" height="79">',
-            f'<h1 class="hero-line">{ix["hero"]}</h1>',
-            f'<a class="play" href="{PLAY}" rel="noopener">{ix["play"]}</a>',
-            f'<p class="play-note">{ix["playNote"]}</p>',
-            '</div>',
-            f'<section class="receive">\n<h2>{ix["receiveTitle"]}</h2>\n' + blocks([('ol', ix['receive'])]) + '\n</section>',
-            f'<section>\n<h2>{ix["aboutTitle"]}</h2>\n<p>{ix["about"]}</p>\n</section>',
-            f'<section>\n<h2>{ix["docsTitle"]}</h2>\n<ul class="cards">'
-            + ''.join(
-                f'<li><a href="{x}.html"><strong>{c["nav"][x]}</strong><span>{ix["links"][x]}</span></a></li>'
-                for x in ('privacy', 'terms', 'delete'))
-            + '</ul>\n</section>',
-        ]
+        title, desc = COPY[lang]['title'], COPY[lang]['desc']
+        body = [landing(lang, c, p, PLAY, blocks)]
     else:
         pg = c[name]
         title = f'{pg["title"]} · {c["name"]}'
@@ -109,25 +97,30 @@ def page(lang, name):
 <link rel="canonical" href="{url(lang, name)}">
 {alts}
 <meta property="og:type" content="website">
+<meta property="og:locale" content="{dict(ko="ko_KR", en="en_US", de="de_DE", fr="fr_FR", es="es_ES", ja="ja_JP")[lang]}">
 <meta property="og:site_name" content="{c["name"]}">
-<meta property="og:title" content="{H.escape(c["index"]["ogTitle"] if name == "index" else title)}">
+<meta property="og:title" content="{H.escape(COPY[lang]["title"] if name == "index" else title)}">
 <meta property="og:description" content="{H.escape(desc)}">
 <meta property="og:url" content="{url(lang, name)}">
-<meta property="og:image" content="{BASE}og.png">
+<meta property="og:image" content="{BASE}assets/og-brand-v74.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#141518" media="(prefers-color-scheme: dark)">
+<meta name="twitter:title" content="{H.escape(title)}">
+<meta name="twitter:description" content="{H.escape(desc)}">
+<meta name="twitter:image" content="{BASE}assets/og-brand-v74.png">
+<meta name="theme-color" content="#fffdf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#29221e" media="(prefers-color-scheme: dark)">
 <link rel="icon" type="image/png" href="{p}assets/favicon.png">
 <link rel="apple-touch-icon" href="{p}assets/icon-180.png">
-<link rel="stylesheet" href="{p}assets/site.css">
+<link rel="stylesheet" href="{p}assets/site.css?v=74">
+<script src="{p}assets/site.js?v=74" defer></script>
 </head>
-<body>
+<body class="{'landing' if name == 'index' else 'legal-page'}">
 <div class="wrap">
 <header class="top">
-{"<span></span>" if name == "index" else f'<a class="brand" href="index.html"><img src="{p}assets/logo.png" alt="{c["name"]}" width="168" height="55"></a>'}
-<nav class="langs" aria-label="{c["langLabel"]}">{langs}</nav>
+<a class="brand" href="index.html"><img src="{p}assets/logo.png" alt="{c['name']}" width="176" height="58"></a>
+<details class="language"><summary aria-label="{COPY[lang]['close']}: {c['langName']}"><span>{c['langName']}</span><i class="chevron" aria-hidden="true"></i></summary><nav class="language-menu" aria-label="{c['langLabel']}">{langs}</nav></details>
 </header>
 {"" if name == "index" else f'<nav class="tabs" aria-label="{c["name"]}">{tabs}</nav>'}
 <main>
@@ -295,14 +288,17 @@ footer a { color: inherit; }
 if __name__ == '__main__':
     os.makedirs(os.path.join(SITE, 'assets'), exist_ok=True)
     with open(os.path.join(SITE, 'assets', 'site.css'), 'w', encoding='utf-8') as f:
-        f.write(CSS)
+        f.write(CSS + BRAND_CSS)
+    with open(os.path.join(SITE, "assets", "site.js"), "w", encoding="utf-8") as f:
+        f.write(BRAND_JS)
     for lang in LANGS:
         out_dir = os.path.join(SITE, d(lang))
         os.makedirs(out_dir, exist_ok=True)
         for name in PAGES:
             with open(os.path.join(out_dir, f'{name}.html'), 'w', encoding='utf-8') as f:
                 f.write(page(lang, name))
-        with open(os.path.join(APP_LEGAL, f'privacy_{lang}.md'), 'w', encoding='utf-8') as f:
-            f.write(privacy_md(lang))
+        if APP_LEGAL:
+            with open(os.path.join(APP_LEGAL, f'privacy_{lang}.md'), 'w', encoding='utf-8') as f:
+                f.write(privacy_md(lang))
     open(os.path.join(SITE, '.nojekyll'), 'w').close()
     print('ok')
