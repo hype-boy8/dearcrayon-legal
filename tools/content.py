@@ -71,7 +71,7 @@ L['ko'] = dict(
                 '기록은 부모가 지우기 전까지 이 휴대폰에 남아요. 구글 드라이브 자동 백업을 켰다면 드라이브 백업도 부모가 지우기 전까지 부모의 구글 계정에 남아요.',
                 '작품 · 답 · 한마디는 앱 안에서 하나씩 지울 수 있고, 아이를 지우면 그 아이의 모든 기록과 파일이 지워져요.',
                 '앱을 지우면 이 휴대폰 안의 모든 기록이 지워져요. 드라이브 백업은 앱을 지워도 남으니 아래 방법으로 지워 주세요. 백업 파일과 보낸 파일은 부모가 보관한 곳에서 직접 지워 주세요.',
-                '<strong>드라이브 백업 지우기:</strong> ‘자동 백업 끄기’는 올리기만 멈추고 드라이브의 백업은 남겨 둬요. 앱의 <strong>드라이브의 백업 지우기</strong>로 드라이브 백업 전체를 지울 수 있어요. 앱 없이도 구글 드라이브 › 설정 › 앱 관리 › Dear Crayon › 숨겨진 앱 데이터 삭제로 지울 수 있고, 구글 계정 › 보안 › 서드 파티 앱에서 접근 권한을 거둘 수 있어요.',
+                '<strong>드라이브 백업 지우기:</strong> ‘계정 연결 해제’는 로그아웃하고 올리기를 멈출 뿐, 드라이브의 백업은 남겨 둬요. 앱의 <strong>드라이브의 백업 지우기</strong>로 드라이브 백업 전체를 지울 수 있어요. 앱 없이도 구글 드라이브 › 설정 › 앱 관리 › Dear Crayon › 숨겨진 앱 데이터 삭제로 지울 수 있고, 구글 계정 › 보안 › 서드 파티 앱에서 접근 권한을 거둘 수 있어요.',
                 '개발자 서버에 남는 기록이 없어서 개발자에게 따로 삭제를 요청할 데이터는 없어요. 드라이브 백업은 부모 본인의 구글 계정에 있고, 부모가 직접 지울 수 있어요.',
             ])]),
             ('5. 아이 개인정보 보호', [('ul', [
@@ -143,7 +143,7 @@ L['ko'] = dict(
                 '<strong>앱에서:</strong> 우리 아이 › <strong>백업 · 내보내기</strong> › <strong>드라이브의 백업 지우기</strong>를 누르고 확인해요. 드라이브 백업 전체가 지워져요.',
                 '<strong>앱 없이:</strong> 구글 드라이브 › <strong>설정</strong> › <strong>앱 관리</strong> › <strong>Dear Crayon</strong> › <strong>숨겨진 앱 데이터 삭제</strong>.',
                 '<strong>접근 권한 거두기:</strong> 구글 계정 › <strong>보안</strong> › <strong>서드 파티 앱</strong>에서 Dear Crayon의 접근을 삭제해요.',
-            ]), ('p', '<strong>자동 백업 끄기</strong>는 올리기만 멈추고 드라이브의 백업은 남겨 둬요. 켜 둔 동안 앱에서 지운 기록은 다음에 올릴 때 드라이브 백업에서도 지워져요.')]),
+            ]), ('p', '<strong>계정 연결 해제</strong>는 로그아웃하고 올리기를 멈출 뿐, 드라이브의 백업은 남겨 둬요. 켜 둔 동안 앱에서 지운 기록은 다음에 올릴 때 드라이브 백업에서도 지워져요.')]),
             ('음성 변환 끄기', [('p', '우리 아이 › 오른쪽 위 ⚙ <strong>설정</strong> › <strong>개인정보</strong> › <strong>아이 목소리를 글로 바꾸기</strong>를 꺼요. 끄면 녹음을 휴대폰 밖으로 보내지 않아요. 중계 서버는 처음부터 녹음과 글을 저장하지 않아서 따로 지울 것이 없어요.')]),
             ('휴대폰 밖에 있는 파일', [('ul', [
                 '<strong>백업 · 보낸 파일:</strong> 부모가 만든 백업 파일, 가족에게 보낸 카드 · 도록 파일은 저장한 곳(내 파일, 클라우드, 메신저 등)에서 직접 지워 주세요. 받은 사람의 휴대폰에 있는 파일은 받은 사람이 지워야 해요.',
@@ -224,7 +224,7 @@ L['en'] = dict(
                 'Records stay on this phone until a parent deletes them. If Google Drive auto backup is on, the Drive backup also stays in the parent’s Google account until the parent deletes it.',
                 'Artworks, answers and quotes can be deleted one by one in the app; deleting a child deletes all of that child’s records and files.',
                 'Deleting the app deletes every record on this phone. The Drive backup remains even if you delete the app, so delete it as described below. Please delete backup files and shared files yourself wherever you saved them.',
-                '<strong>Deleting the Drive backup:</strong> “Turn off auto backup” only stops uploads and leaves the backup in Drive. <strong>Delete backup from Drive</strong> in the app deletes the whole Drive backup. Without the app, you can delete it in Google Drive › Settings › Manage apps › Dear Crayon › Delete hidden app data, and revoke access in Google Account › Security › Third-party apps.',
+                '<strong>Deleting the Drive backup:</strong> “Disconnect account” signs out and stops uploads, but leaves the backup in Drive. <strong>Delete backup from Drive</strong> in the app deletes the whole Drive backup. Without the app, you can delete it in Google Drive › Settings › Manage apps › Dear Crayon › Delete hidden app data, and revoke access in Google Account › Security › Third-party apps.',
                 'Because nothing is kept on a developer server, there is no data to ask the developer to delete. The Drive backup is in the parent’s own Google account, and the parent can delete it at any time.',
             ])]),
             ('5. Children’s privacy', [('ul', [
@@ -296,7 +296,7 @@ L['en'] = dict(
                 '<strong>In the app:</strong> My Kids › <strong>Backup &amp; export</strong> › tap <strong>Delete backup from Drive</strong> and confirm. The whole Drive backup is deleted.',
                 '<strong>Without the app:</strong> Google Drive › <strong>Settings</strong> › <strong>Manage apps</strong> › <strong>Dear Crayon</strong> › <strong>Delete hidden app data</strong>.',
                 '<strong>Revoke access:</strong> Google Account › <strong>Security</strong> › <strong>Third-party apps</strong>, then remove Dear Crayon’s access.',
-            ]), ('p', '<strong>Turn off auto backup</strong> only stops uploads and leaves the backup in Drive. While it is on, records you delete in the app are also deleted from the Drive backup at the next upload.')]),
+            ]), ('p', '<strong>Disconnect account</strong> signs out and stops uploads, but leaves the backup in Drive. While it is on, records you delete in the app are also deleted from the Drive backup at the next upload.')]),
             ('Turn off voice-to-text', [('p', 'Go to My Kids › ⚙ <strong>Settings</strong> at the top right › <strong>Privacy</strong> and turn off <strong>Turn voice into text</strong>. Recordings will no longer leave the phone. The relay server never stores recordings or text, so there is nothing there to delete.')]),
             ('Files outside the phone', [('ul', [
                 '<strong>Backups and shared files:</strong> please delete backup files you created and card or book files you sent to family from wherever you saved them (Files, cloud storage, messaging apps, etc.). Files on a recipient’s phone must be deleted by the recipient.',
@@ -377,7 +377,7 @@ L['de'] = dict(
                 'Einträge bleiben auf diesem Handy, bis ein Elternteil sie löscht. Ist die automatische Google-Drive-Sicherung eingeschaltet, bleibt auch die Drive-Sicherung im Google-Konto der Eltern, bis sie gelöscht wird.',
                 'Kunstwerke, Antworten und Zitate lassen sich in der App einzeln löschen; wird ein Kind gelöscht, werden alle seine Einträge und Dateien gelöscht.',
                 'Wird die App gelöscht, sind alle Einträge auf diesem Handy gelöscht. Die Drive-Sicherung bleibt auch nach dem Löschen der App bestehen; lösche sie wie unten beschrieben. Sicherungen und geteilte Dateien löschst du bitte selbst dort, wo du sie gespeichert hast.',
-                '<strong>Drive-Sicherung löschen:</strong> „Automatische Sicherung ausschalten“ stoppt nur das Hochladen und lässt die Sicherung in Drive bestehen. Mit <strong>Sicherung aus Drive löschen</strong> in der App wird die gesamte Drive-Sicherung gelöscht. Ohne App geht es unter Google Drive › Einstellungen › Apps verwalten › Dear Crayon › Versteckte App-Daten löschen; den Zugriff entziehst du unter Google-Konto › Sicherheit › Drittanbieter-Apps.',
+                '<strong>Drive-Sicherung löschen:</strong> „Konto trennen“ meldet dich ab und stoppt das Hochladen, lässt die Sicherung in Drive aber bestehen. Mit <strong>Sicherung aus Drive löschen</strong> in der App wird die gesamte Drive-Sicherung gelöscht. Ohne App geht es unter Google Drive › Einstellungen › Apps verwalten › Dear Crayon › Versteckte App-Daten löschen; den Zugriff entziehst du unter Google-Konto › Sicherheit › Drittanbieter-Apps.',
                 'Da nichts auf einem Server des Entwicklers gespeichert wird, gibt es keine Daten, deren Löschung beim Entwickler beantragt werden müsste. Die Drive-Sicherung liegt im eigenen Google-Konto der Eltern und kann jederzeit von ihnen gelöscht werden.',
             ])]),
             ('5. Datenschutz für Kinder', [('ul', [
@@ -449,7 +449,7 @@ L['de'] = dict(
                 '<strong>In der App:</strong> Meine Kinder › <strong>Sichern &amp; exportieren</strong> › auf <strong>Sicherung aus Drive löschen</strong> tippen und bestätigen. Die gesamte Drive-Sicherung wird gelöscht.',
                 '<strong>Ohne App:</strong> Google Drive › <strong>Einstellungen</strong> › <strong>Apps verwalten</strong> › <strong>Dear Crayon</strong> › <strong>Versteckte App-Daten löschen</strong>.',
                 '<strong>Zugriff entziehen:</strong> Google-Konto › <strong>Sicherheit</strong> › <strong>Drittanbieter-Apps</strong> und den Zugriff von Dear Crayon entfernen.',
-            ]), ('p', '<strong>Automatische Sicherung ausschalten</strong> stoppt nur das Hochladen und lässt die Sicherung in Drive bestehen. Solange sie eingeschaltet ist, werden in der App gelöschte Einträge beim nächsten Hochladen auch aus der Drive-Sicherung gelöscht.')]),
+            ]), ('p', '<strong>Konto trennen</strong> meldet dich ab und stoppt das Hochladen, lässt die Sicherung in Drive aber bestehen. Solange sie eingeschaltet ist, werden in der App gelöschte Einträge beim nächsten Hochladen auch aus der Drive-Sicherung gelöscht.')]),
             ('Sprache-zu-Text ausschalten', [('p', 'Meine Kinder › oben rechts ⚙ <strong>Einstellungen</strong> › <strong>Datenschutz</strong> › <strong>Stimme in Text umwandeln</strong> ausschalten. Dann verlassen Aufnahmen das Handy nicht mehr. Der Relay-Server speichert ohnehin weder Aufnahmen noch Text, dort gibt es also nichts zu löschen.')]),
             ('Dateien außerhalb des Handys', [('ul', [
                 '<strong>Sicherungen und geteilte Dateien:</strong> Selbst erstellte Sicherungen und an die Familie gesendete Karten- oder Buchdateien löschst du bitte dort, wo du sie gespeichert hast (Dateien, Cloud, Messenger usw.). Dateien auf dem Handy der Empfänger müssen diese selbst löschen.',
@@ -530,7 +530,7 @@ L['fr'] = dict(
                 'Les données restent sur ce téléphone jusqu’à ce qu’un parent les supprime. Si la sauvegarde automatique Google Drive est activée, la sauvegarde Drive reste aussi dans le compte Google du parent jusqu’à ce qu’il la supprime.',
                 'Les œuvres, réponses et citations peuvent être supprimées une par une dans l’application ; supprimer un enfant efface toutes ses données et tous ses fichiers.',
                 'Supprimer l’application efface toutes les données de ce téléphone. La sauvegarde Drive reste même après la suppression de l’application : supprimez-la comme indiqué ci-dessous. Supprimez vous-même les sauvegardes et fichiers partagés là où vous les avez enregistrés.',
-                '<strong>Supprimer la sauvegarde Drive :</strong> « Désactiver la sauvegarde automatique » arrête seulement les envois et laisse la sauvegarde dans Drive. <strong>Supprimer la sauvegarde de Drive</strong> dans l’application efface toute la sauvegarde Drive. Sans l’application, vous pouvez la supprimer dans Google Drive › Paramètres › Gérer les applications › Dear Crayon › Supprimer les données d’application masquées, et retirer l’accès dans Compte Google › Sécurité › Applications tierces.',
+                '<strong>Supprimer la sauvegarde Drive :</strong> « Déconnecter le compte » vous déconnecte et arrête les envois, mais laisse la sauvegarde dans Drive. <strong>Supprimer la sauvegarde de Drive</strong> dans l’application efface toute la sauvegarde Drive. Sans l’application, vous pouvez la supprimer dans Google Drive › Paramètres › Gérer les applications › Dear Crayon › Supprimer les données d’application masquées, et retirer l’accès dans Compte Google › Sécurité › Applications tierces.',
                 'Comme rien n’est conservé sur un serveur du développeur, il n’y a aucune donnée dont il faudrait demander la suppression au développeur. La sauvegarde Drive se trouve dans le propre compte Google du parent, qui peut la supprimer à tout moment.',
             ])]),
             ('5. Protection des données des enfants', [('ul', [
@@ -602,7 +602,7 @@ L['fr'] = dict(
                 '<strong>Dans l’application :</strong> Mes enfants › <strong>Sauvegarde et export</strong> › touchez <strong>Supprimer la sauvegarde de Drive</strong> et confirmez. Toute la sauvegarde Drive est supprimée.',
                 '<strong>Sans l’application :</strong> Google Drive › <strong>Paramètres</strong> › <strong>Gérer les applications</strong> › <strong>Dear Crayon</strong> › <strong>Supprimer les données d’application masquées</strong>.',
                 '<strong>Retirer l’accès :</strong> Compte Google › <strong>Sécurité</strong> › <strong>Applications tierces</strong>, puis supprimez l’accès de Dear Crayon.',
-            ]), ('p', '<strong>Désactiver la sauvegarde automatique</strong> arrête seulement les envois et laisse la sauvegarde dans Drive. Tant qu’elle est activée, les éléments supprimés dans l’application sont aussi supprimés de la sauvegarde Drive au prochain envoi.')]),
+            ]), ('p', '<strong>Déconnecter le compte</strong> vous déconnecte et arrête les envois, mais laisse la sauvegarde dans Drive. Tant qu’elle est activée, les éléments supprimés dans l’application sont aussi supprimés de la sauvegarde Drive au prochain envoi.')]),
             ('Désactiver la transcription de la voix', [('p', 'Mes enfants › ⚙ <strong>Réglages</strong> en haut à droite › <strong>Confidentialité</strong> › désactivez <strong>Transformer la voix en texte</strong>. Les enregistrements ne quittent alors plus le téléphone. Le serveur relais ne conserve de toute façon ni enregistrement ni texte : il n’y a rien à y supprimer.')]),
             ('Fichiers hors du téléphone', [('ul', [
                 '<strong>Sauvegardes et fichiers partagés :</strong> supprimez vous-même les sauvegardes que vous avez créées et les fichiers de carte ou de livre envoyés à la famille, là où vous les avez enregistrés (Fichiers, cloud, messagerie, etc.). Les fichiers sur le téléphone d’un destinataire doivent être supprimés par celui-ci.',
@@ -683,7 +683,7 @@ L['es'] = dict(
                 'Los registros permanecen en este móvil hasta que un adulto los borra. Si la copia de seguridad automática en Google Drive está activada, la copia en Drive también permanece en la cuenta de Google del adulto hasta que la borre.',
                 'Las obras, respuestas y frases se pueden borrar una a una en la app; al borrar a un niño se borran todos sus registros y archivos.',
                 'Al borrar la app se borran todos los registros de este móvil. La copia en Drive se mantiene aunque borres la app, así que bórrala como se explica abajo. Borra tú las copias de seguridad y los archivos compartidos allí donde los guardaste.',
-                '<strong>Borrar la copia en Drive:</strong> «Desactivar la copia automática» solo detiene las subidas y deja la copia en Drive. <strong>Borrar la copia de Drive</strong> en la app borra toda la copia en Drive. Sin la app, puedes borrarla en Google Drive › Configuración › Gestionar aplicaciones › Dear Crayon › Eliminar datos ocultos de la aplicación, y retirar el acceso en Cuenta de Google › Seguridad › Aplicaciones de terceros.',
+                '<strong>Borrar la copia en Drive:</strong> «Desconectar cuenta» cierra la sesión y detiene las subidas, pero deja la copia en Drive. <strong>Borrar la copia de Drive</strong> en la app borra toda la copia en Drive. Sin la app, puedes borrarla en Google Drive › Configuración › Gestionar aplicaciones › Dear Crayon › Eliminar datos ocultos de la aplicación, y retirar el acceso en Cuenta de Google › Seguridad › Aplicaciones de terceros.',
                 'Como no se guarda nada en ningún servidor del desarrollador, no hay datos cuyo borrado tengas que pedir al desarrollador. La copia en Drive está en la propia cuenta de Google del adulto, que puede borrarla cuando quiera.',
             ])]),
             ('5. Privacidad de los niños', [('ul', [
@@ -755,7 +755,7 @@ L['es'] = dict(
                 '<strong>En la app:</strong> Mis peques › <strong>Copia y exportación</strong> › toca <strong>Borrar la copia de Drive</strong> y confirma. Se borra toda la copia en Drive.',
                 '<strong>Sin la app:</strong> Google Drive › <strong>Configuración</strong> › <strong>Gestionar aplicaciones</strong> › <strong>Dear Crayon</strong> › <strong>Eliminar datos ocultos de la aplicación</strong>.',
                 '<strong>Retirar el acceso:</strong> Cuenta de Google › <strong>Seguridad</strong> › <strong>Aplicaciones de terceros</strong> y elimina el acceso de Dear Crayon.',
-            ]), ('p', '<strong>Desactivar la copia automática</strong> solo detiene las subidas y deja la copia en Drive. Mientras está activada, lo que borras en la app también se borra de la copia en Drive en la siguiente subida.')]),
+            ]), ('p', '<strong>Desconectar cuenta</strong> cierra la sesión y detiene las subidas, pero deja la copia en Drive. Mientras está activada, lo que borras en la app también se borra de la copia en Drive en la siguiente subida.')]),
             ('Desactivar la voz a texto', [('p', 'Mis peques › ⚙ <strong>Ajustes</strong> arriba a la derecha › <strong>Privacidad</strong> › desactiva <strong>Convertir la voz en texto</strong>. Así las grabaciones dejan de salir del móvil. El servidor intermediario nunca guarda grabaciones ni textos, así que allí no hay nada que borrar.')]),
             ('Archivos fuera del móvil', [('ul', [
                 '<strong>Copias y archivos compartidos:</strong> borra tú las copias de seguridad que creaste y los archivos de tarjetas o libros que enviaste a la familia allí donde los guardaste (Archivos, nube, mensajería, etc.). Los archivos del móvil de quien los recibió debe borrarlos esa persona.',
@@ -815,7 +815,7 @@ L['ja'] = dict(
                 '記録は、親が消すまでこのスマートフォンに残ります。Google ドライブ自動バックアップをオンにした場合、ドライブのバックアップも親が消すまで親の Google アカウントに残ります。',
                 '作品・答え・ひとことはアプリの中でひとつずつ消せます。子どもを削除すると、その子のすべての記録とファイルが消えます。',
                 'アプリを削除すると、このスマートフォンの中のすべての記録が消えます。ドライブのバックアップはアプリを削除しても残るため、下の方法で消してください。バックアップファイルや送ったファイルは、保存した場所でご自身で消してください。',
-                '<strong>ドライブのバックアップを消す:</strong>「自動バックアップをオフにする」はアップロードを止めるだけで、ドライブのバックアップは残ります。アプリの<strong>ドライブのバックアップを削除</strong>で、ドライブのバックアップ全体を消せます。アプリがなくても、Google ドライブ › 設定 › アプリの管理 › Dear Crayon › 非表示のアプリデータを削除 で消せます。Google アカウント › セキュリティ › サードパーティ製アプリ から、アクセス権を取り消せます。',
+                '<strong>ドライブのバックアップを消す:</strong>「アカウントの接続を解除」はログアウトしてアップロードを止めるだけで、ドライブのバックアップは残ります。アプリの<strong>ドライブのバックアップを削除</strong>で、ドライブのバックアップ全体を消せます。アプリがなくても、Google ドライブ › 設定 › アプリの管理 › Dear Crayon › 非表示のアプリデータを削除 で消せます。Google アカウント › セキュリティ › サードパーティ製アプリ から、アクセス権を取り消せます。',
                 '開発者のサーバーに残る記録がないため、開発者に削除を依頼していただくデータはありません。ドライブのバックアップは親自身の Google アカウントにあり、親がいつでも消せます。',
             ])]),
             ('5. 子どもの個人情報の保護', [('ul', [
@@ -887,7 +887,7 @@ L['ja'] = dict(
                 '<strong>アプリで:</strong> うちの子 › <strong>バックアップ</strong> › <strong>ドライブのバックアップを削除</strong>をタップして確認します。ドライブのバックアップ全体が消えます。',
                 '<strong>アプリなしで:</strong> Google ドライブ › <strong>設定</strong> › <strong>アプリの管理</strong> › <strong>Dear Crayon</strong> › <strong>非表示のアプリデータを削除</strong>。',
                 '<strong>アクセス権を取り消す:</strong> Google アカウント › <strong>セキュリティ</strong> › <strong>サードパーティ製アプリ</strong>で、Dear Crayon のアクセスを削除します。',
-            ]), ('p', '<strong>自動バックアップをオフにする</strong>と、アップロードが止まるだけで、ドライブのバックアップは残ります。オンのあいだにアプリで消した記録は、次のアップロードのときにドライブのバックアップからも消えます。')]),
+            ]), ('p', '<strong>アカウントの接続を解除</strong>すると、ログアウトしてアップロードが止まるだけで、ドライブのバックアップは残ります。オンのあいだにアプリで消した記録は、次のアップロードのときにドライブのバックアップからも消えます。')]),
             ('「声を文字にする」をオフにする', [('p', 'うちの子 › 右上の ⚙ <strong>設定</strong> › <strong>プライバシー</strong> › <strong>子どもの声を文字にする</strong>をオフにします。オフにすると、録音をスマートフォンの外へ送りません。中継サーバーははじめから録音も文字も保存しないため、別に消すものはありません。')]),
             ('スマートフォンの外にあるファイル', [('ul', [
                 '<strong>バックアップ・送ったファイル:</strong> 親が作ったバックアップファイル、家族に送ったカード・作品集のファイルは、保存した場所(ファイル、クラウド、メッセージアプリなど)でご自身で消してください。受け取った人のスマートフォンにあるファイルは、受け取った人が消す必要があります。',
