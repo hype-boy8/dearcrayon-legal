@@ -129,7 +129,7 @@
     $('get').textContent = AVAILABLE ? t.get : t.install;
     $('get').href = AVAILABLE ? PLAY : home();
     $('open').textContent = t.open;
-    $('open').hidden = !ok || isIos;
+    $('open').hidden = !ok || !isAndroid;
     var fallback = AVAILABLE ? PLAY : new URL(home(), location.href).href;
     if (ok) $('open').href = isAndroid
       ? 'intent://join/' + frag + '#Intent;scheme=dearcrayon;package=com.dearcrayon.app;S.browser_fallback_url=' + encodeURIComponent(fallback) + ';end'
@@ -140,7 +140,7 @@
     $('guide-wrap').hidden = !ok;
     $('steps').replaceChildren();
     t.steps.forEach(function (line) { var li = document.createElement('li'); var span = document.createElement('span'); span.textContent = line; li.appendChild(span); $('steps').appendChild(li); });
-    $('bad').textContent = t.bad;
+    $('bad').textContent = frag ? t.bad : t.nolink;
     $('bad').hidden = ok;
     $('ios').textContent = t.ios;
     $('ios').hidden = !isIos;

@@ -31,9 +31,11 @@ function setup({hash='#'+token, lang='ko', ua='Desktop', platform='', touches=0,
   for(const hash of ['', '#broken', '#'+token+'x', '#1.ABCDEFGHIJKLMNOP.<script>']) {
     const p=setup({hash}); assert.equal(p.element('open').hidden,true); assert.equal(p.element('open').href,undefined); assert.equal(p.element('guide-wrap').hidden,true); assert.equal(p.element('bad').hidden,false);
   }
-  const p=setup();
+  assert.equal(setup({hash:''}).element('bad').textContent.includes('잘렸'),false);
+  assert.equal(setup({hash:'#broken'}).element('bad').textContent.includes('잘렸'),true);
+  const desk=setup(); assert.equal(desk.element('open').hidden,true); assert.equal(desk.element('guide-wrap').hidden,false);
+  const p=setup({ua:'Desktop'});
   assert.equal(p.element('open').href,'dearcrayon://join/'+token);
-  assert.equal(p.element('open').hidden,false);
   assert.equal(p.element('get').href,'../');
   assert.equal(p.element('join-footer').hidden,true);
   for(const link of p.links) {
@@ -56,6 +58,7 @@ function setup({hash='#'+token, lang='ko', ua='Desktop', platform='', touches=0,
   for (const opts of [{ua:'iPhone'},{platform:'MacIntel',touches:5}]) {
     const i=setup(opts); assert.equal(i.element('ios').hidden,false); assert.equal(i.element('open').hidden,true);
   }
+  assert.equal(setup({ua:'Android'}).element('open').hidden,false);
   const android=setup({ua:'Android'}).element('open').href;
   assert.ok(android.startsWith('intent://join/'+token+'#Intent;scheme=dearcrayon;package=com.dearcrayon.app;'));
   assert.ok(android.includes('S.browser_fallback_url=https%3A%2F%2Fexample.test%2F;end'));
@@ -67,5 +70,5 @@ function setup({hash='#'+token, lang='ko', ua='Desktop', platform='', touches=0,
   assert.equal(setup({lang:'constructor'}).document.documentElement.lang,'ko');
   assert.ok(html.includes('content="no-referrer"'));
   assert.ok(!/\b(?:fetch|localStorage|sessionStorage)\b/.test(code));
-  console.log('PASS: valid/invalid links, six languages, fragment preservation, clipboard/fallback, iPhone/iPad, Android intent, pre/post launch');
+  console.log('PASS: no link vs cut link, desktop hides open, valid/invalid links, six languages, fragment preservation, clipboard/fallback, iPhone/iPad, Android intent, pre/post launch');
 })();

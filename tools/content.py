@@ -1,6 +1,6 @@
 # Dear Crayon 정적 안내 페이지 내용(6개 언어). build.py 가 읽는다.
 # 블록: ('p', html) · ('ul', [html]) · ('ol', [html]) · ('dl', [(dt, dd)]) · ('box', 제목, [html])
-EMAIL = 'zxcvzxcv4423@gmail.com'
+EMAIL = 'planarfigure@gmail.com'
 MAIL = f'<a href="mailto:{EMAIL}">{EMAIL}</a>'
 BASE = 'https://hype-boy8.github.io/dearcrayon-legal/'
 
@@ -13,7 +13,7 @@ L['ko'] = dict(
     langName='한국어', name='Dear Crayon',
     nav=dict(home='홈', privacy='개인정보 처리방침', terms='이용약관', delete='데이터 삭제'),
     langLabel='언어', effective='시행일 2026년 10월 19일', contact='문의',
-    footer='Dear Crayon · 운영: Dear Crayon 개발자',
+    footer='Dear Crayon · 운영 · Operated by 플래너피규어(Planar Figure)',
     index=dict(
         title='Dear Crayon · 아이의 그림과 말을 모으는 곳',
         desc='부모가 아이의 그림 사진과 목소리를 기록하고, 한 해의 기록을 도록으로 엮는 안드로이드 앱. 기록은 휴대폰에 저장되고, 원하면 내 구글 드라이브에도 자동 백업돼요.',
@@ -33,7 +33,7 @@ L['ko'] = dict(
             ('기록은 휴대폰과 내 드라이브에만', [('p', '회원 가입이 없고, 개발자는 기록을 받지 않아요. 아이 이름 · 그림 · 목소리 · 글은 이 휴대폰에 저장돼요. 부모가 구글 드라이브 자동 백업을 켜면 <strong>부모 본인의 구글 드라이브</strong> 안 앱 전용 공간에도 저장돼요. 개발자 서버를 거치지 않아서 개발자는 볼 수 없어요. 그 밖에 휴대폰 밖으로 나가는 것은 부모가 허락한 경우의 음성 → 글 변환뿐이고, 중계 서버는 녹음과 글을 저장하지 않아요. 광고 · 사용 분석 · 위치 정보를 쓰지 않아요. 자세한 내용은 <a href="privacy.html">개인정보 처리방침</a>에 있어요.')]),
             ('요금', [('p', '앱 설치와 기록, 이달의 카드, 도록 보기 · 공유(‘미리보기’ 표시)는 무료예요. 인쇄용 고화질 도록 PDF 내려받기는 유료이며 구글 플레이 결제로 처리돼요. 개발자는 카드 정보를 받지 않아요.')]),
         ],
-        operator=[('운영자', 'Dear Crayon 개발자 · 대한민국 · 개인 개발자'), ('서비스 이름', 'Dear Crayon (Dear Crayon) · 안드로이드'), ('문의', MAIL)],
+        operator=[('운영자', '플래너피규어(Planar Figure) · 대한민국'), ('서비스 이름', 'Dear Crayon (Dear Crayon) · 안드로이드'), ('문의', MAIL)],
         operatorTitle='운영자와 문의',
         linksTitle='안내 문서',
         links=dict(privacy='모은 정보 · 쓰는 곳 · 지우는 법', terms='이용 조건 · 결제와 환불', delete='기록을 지우는 방법 · 단계별 안내'),
@@ -82,7 +82,7 @@ L['ko'] = dict(
                 '부모는 언제든 아이 정보를 보고 · 고치고 · 지우고, 동의를 거둘 수 있어요(모두 앱 안에서 바로).',
             ])]),
             ('6. 문의', [('ul', [
-                '운영자: Dear Crayon 개발자(개인 개발자)',
+                '운영자: 플래너피규어(Planar Figure)',
                 f'연락처: {MAIL}',
                 f'웹: <a href="{BASE}privacy.html">{BASE}privacy.html</a>',
             ])]),
@@ -173,7 +173,7 @@ L['en'] = dict(
     langName='English', name='Dear Crayon',
     nav=dict(home='Home', privacy='Privacy Policy', terms='Terms of Use', delete='Data Deletion'),
     langLabel='Language', effective='Effective October 19, 2026', contact='Contact',
-    footer='Dear Crayon · Operated by the Dear Crayon developer',
+    footer='Dear Crayon · Operated by Planar Figure',
     index=dict(
         title='Dear Crayon · Little drawings, little words',
         desc='An Android app for parents to keep their child’s drawings and voice, and turn each year into a book. Records stay on your phone — and, if you turn it on, in your own Google Drive.',
@@ -193,7 +193,7 @@ L['en'] = dict(
             ('Your records stay with you', [('p', 'There is no sign-up, and the developer never receives your records. Your child’s name, drawings, voice and words are stored on this phone. If a parent turns on Google Drive auto backup, they are also stored in an app-only space in <strong>the parent’s own Google Drive</strong>. Nothing passes through the developer’s servers, so the developer cannot see them. The only other thing that leaves the phone is voice-to-text, if a parent allows it, and the relay server does not store recordings or text. No advertising, usage analytics or location. Details are in the <a href="privacy.html">Privacy Policy</a>.')]),
             ('Pricing', [('p', 'Installing the app, recording, monthly cards, and viewing and sharing the book (marked “Preview”) are free. Downloading the high-resolution, print-ready book PDF is a paid purchase handled by Google Play Billing. The developer never receives your card details.')]),
         ],
-        operator=[('Operator', 'Dear Crayon developer · Republic of Korea · individual developer'), ('Service', 'Dear Crayon · Android'), ('Contact', MAIL)],
+        operator=[('Operator', 'Planar Figure · Republic of Korea'), ('Service', 'Dear Crayon · Android'), ('Contact', MAIL)],
         operatorTitle='Operator and contact',
         linksTitle='Documents',
         links=dict(privacy='What is collected, where it goes, how to delete it', terms='Conditions of use, payment and refunds', delete='Step-by-step guide to deleting your data'),
@@ -242,7 +242,7 @@ L['en'] = dict(
                 'Parents can review, correct or delete the child’s information and withdraw consent at any time, directly in the app.',
             ])]),
             ('6. Contact', [('ul', [
-                'Operator: Dear Crayon developer (individual developer)',
+                'Operator: Planar Figure',
                 f'Email: {MAIL}',
                 f'Web: <a href="{BASE}en/privacy.html">{BASE}en/privacy.html</a>',
             ])]),
@@ -333,7 +333,7 @@ L['de'] = dict(
     langName='Deutsch', name='Dear Crayon',
     nav=dict(home='Start', privacy='Datenschutz', terms='Nutzungsbedingungen', delete='Daten löschen'),
     langLabel='Sprache', effective='Gültig ab 19. Oktober 2026', contact='Kontakt',
-    footer='Dear Crayon · Anbieter: Dear-Crayon-Entwickler',
+    footer='Dear Crayon · Anbieter: Planar Figure',
     index=dict(
         title='Dear Crayon · Kleine Bilder, kleine Worte',
         desc='Eine Android-App für Eltern, um die Bilder und die Stimme ihres Kindes festzuhalten und jedes Jahr zu einem Buch zu machen. Die Einträge bleiben auf deinem Handy – und, wenn du es einschaltest, in deinem eigenen Google Drive.',
@@ -353,7 +353,7 @@ L['de'] = dict(
             ('Deine Einträge bleiben bei dir', [('p', 'Es gibt keine Registrierung, und der Entwickler erhält deine Einträge nie. Name, Bilder, Stimme und Worte deines Kindes werden auf diesem Handy gespeichert. Schaltet ein Elternteil die automatische Google-Drive-Sicherung ein, werden sie zusätzlich in einem App-eigenen Bereich im <strong>eigenen Google Drive der Eltern</strong> gespeichert. Nichts läuft über Server des Entwicklers, der Entwickler kann sie also nicht sehen. Sonst verlässt nur die Sprache-zu-Text-Umwandlung das Handy, wenn ein Elternteil sie erlaubt – und der Relay-Server speichert weder Aufnahmen noch Text. Keine Werbung, keine Nutzungsanalyse, kein Standort. Einzelheiten in der <a href="privacy.html">Datenschutzerklärung</a>.')]),
             ('Preise', [('p', 'Installation, Einträge, Monatskarten sowie Ansehen und Teilen des Buchs (mit „Vorschau“ gekennzeichnet) sind kostenlos. Der Download des hochauflösenden, druckfertigen Buch-PDFs ist kostenpflichtig und läuft über Google Play Billing. Der Entwickler erhält keine Kartendaten.')]),
         ],
-        operator=[('Anbieter', 'Dear-Crayon-Entwickler · Republik Korea · Einzelentwickler'), ('Dienst', 'Dear Crayon · Android'), ('Kontakt', MAIL)],
+        operator=[('Anbieter', 'Planar Figure · Republik Korea'), ('Dienst', 'Dear Crayon · Android'), ('Kontakt', MAIL)],
         operatorTitle='Anbieter und Kontakt',
         linksTitle='Dokumente',
         links=dict(privacy='Welche Daten, wohin sie gehen, wie man sie löscht', terms='Nutzungsbedingungen, Zahlung und Erstattung', delete='Schritt-für-Schritt-Anleitung zum Löschen'),
@@ -402,7 +402,7 @@ L['de'] = dict(
                 'Eltern können die Angaben zum Kind jederzeit direkt in der App ansehen, berichtigen oder löschen und ihre Einwilligung widerrufen.',
             ])]),
             ('6. Kontakt', [('ul', [
-                'Anbieter: Dear-Crayon-Entwickler (Einzelentwickler)',
+                'Anbieter: Planar Figure',
                 f'E-Mail: {MAIL}',
                 f'Web: <a href="{BASE}de/privacy.html">{BASE}de/privacy.html</a>',
             ])]),
@@ -493,7 +493,7 @@ L['fr'] = dict(
     langName='Français', name='Dear Crayon',
     nav=dict(home='Accueil', privacy='Confidentialité', terms='Conditions d’utilisation', delete='Suppression des données'),
     langLabel='Langue', effective='En vigueur le 19 octobre 2026', contact='Contact',
-    footer='Dear Crayon · Éditeur : développeur de Dear Crayon',
+    footer='Dear Crayon · Éditeur : Planar Figure',
     index=dict(
         title='Dear Crayon · Petits dessins, petits mots',
         desc='Une application Android pour garder les dessins et la voix de votre enfant, et faire de chaque année un livre. Les données restent sur votre téléphone — et, si vous l’activez, dans votre propre Google Drive.',
@@ -513,7 +513,7 @@ L['fr'] = dict(
             ('Vos données restent chez vous', [('p', 'Pas d’inscription, et le développeur ne reçoit jamais vos données. Le prénom, les dessins, la voix et les mots de votre enfant sont conservés sur ce téléphone. Si un parent active la sauvegarde automatique Google Drive, ils sont aussi conservés dans un espace réservé à l’application dans <strong>le propre Google Drive du parent</strong>. Rien ne passe par les serveurs du développeur, qui ne peut donc pas les voir. Sinon, seule la transcription de la voix quitte le téléphone, si un parent l’autorise, et le serveur relais ne conserve ni enregistrement ni texte. Ni publicité, ni mesure d’audience, ni localisation. Détails dans la <a href="privacy.html">politique de confidentialité</a>.')]),
             ('Tarifs', [('p', 'L’installation, les enregistrements, les cartes du mois ainsi que la consultation et le partage du livre (marqué « Aperçu ») sont gratuits. Le téléchargement du PDF du livre en haute résolution, prêt à imprimer, est payant et passe par la facturation Google Play. Le développeur ne reçoit jamais vos données bancaires.')]),
         ],
-        operator=[('Éditeur', 'Développeur de Dear Crayon · République de Corée · développeur indépendant'), ('Service', 'Dear Crayon · Android'), ('Contact', MAIL)],
+        operator=[('Éditeur', 'Planar Figure · République de Corée'), ('Service', 'Dear Crayon · Android'), ('Contact', MAIL)],
         operatorTitle='Éditeur et contact',
         linksTitle='Documents',
         links=dict(privacy='Ce qui est collecté, où cela va, comment le supprimer', terms='Conditions d’utilisation, paiement et remboursement', delete='Guide pas à pas pour supprimer vos données'),
@@ -562,7 +562,7 @@ L['fr'] = dict(
                 'Les parents peuvent à tout moment consulter, corriger ou supprimer les informations de l’enfant et retirer leur consentement, directement dans l’application.',
             ])]),
             ('6. Contact', [('ul', [
-                'Éditeur : développeur de Dear Crayon (développeur indépendant)',
+                'Éditeur : Planar Figure',
                 f'E-mail : {MAIL}',
                 f'Web : <a href="{BASE}fr/privacy.html">{BASE}fr/privacy.html</a>',
             ])]),
@@ -653,7 +653,7 @@ L['es'] = dict(
     langName='Español', name='Dear Crayon',
     nav=dict(home='Inicio', privacy='Privacidad', terms='Condiciones de uso', delete='Borrar datos'),
     langLabel='Idioma', effective='Vigente desde el 19 de octubre de 2026', contact='Contacto',
-    footer='Dear Crayon · Responsable: desarrollador de Dear Crayon',
+    footer='Dear Crayon · Responsable: Planar Figure',
     index=dict(
         title='Dear Crayon · Pequeños dibujos y palabras',
         desc='Una app de Android para guardar los dibujos y la voz de tu peque y convertir cada año en un libro. Los registros se quedan en tu móvil y, si lo activas, en tu propio Google Drive.',
@@ -673,7 +673,7 @@ L['es'] = dict(
             ('Tus registros se quedan contigo', [('p', 'No hay registro de usuario, y el desarrollador nunca recibe tus registros. El nombre, los dibujos, la voz y las palabras de tu peque se guardan en este móvil. Si un adulto activa la copia de seguridad automática en Google Drive, también se guardan en un espacio exclusivo de la app en <strong>el propio Google Drive de ese adulto</strong>. Nada pasa por los servidores del desarrollador, así que el desarrollador no puede verlos. Aparte de eso, solo sale del móvil la conversión de voz a texto, si un adulto la permite, y el servidor intermediario no guarda grabaciones ni textos. Sin publicidad, análisis de uso ni ubicación. Más detalles en la <a href="privacy.html">política de privacidad</a>.')]),
             ('Precios', [('p', 'Instalar la app, grabar, las tarjetas del mes y ver y compartir el libro (marcado como «Vista previa») son gratis. Descargar el PDF del libro en alta resolución, listo para imprimir, es de pago y se gestiona con la facturación de Google Play. El desarrollador nunca recibe los datos de tu tarjeta.')]),
         ],
-        operator=[('Responsable', 'Desarrollador de Dear Crayon · República de Corea · desarrollador individual'), ('Servicio', 'Dear Crayon · Android'), ('Contacto', MAIL)],
+        operator=[('Responsable', 'Planar Figure · República de Corea'), ('Servicio', 'Dear Crayon · Android'), ('Contacto', MAIL)],
         operatorTitle='Responsable y contacto',
         linksTitle='Documentos',
         links=dict(privacy='Qué se recoge, adónde va y cómo borrarlo', terms='Condiciones de uso, pagos y reembolsos', delete='Guía paso a paso para borrar tus datos'),
@@ -722,7 +722,7 @@ L['es'] = dict(
                 'Los padres pueden ver, corregir o borrar la información del niño y retirar su consentimiento en cualquier momento, directamente en la app.',
             ])]),
             ('6. Contacto', [('ul', [
-                'Responsable: desarrollador de Dear Crayon (desarrollador individual)',
+                'Responsable: Planar Figure',
                 f'Correo: {MAIL}',
                 f'Web: <a href="{BASE}es/privacy.html">{BASE}es/privacy.html</a>',
             ])]),
@@ -813,7 +813,7 @@ L['ja'] = dict(
     langName='日本語', name='Dear Crayon',
     nav=dict(home='ホーム', privacy='プライバシーポリシー', terms='利用規約', delete='データの削除'),
     langLabel='言語', effective='施行日 2026年10月19日', contact='お問い合わせ',
-    footer='Dear Crayon · 運営: Dear Crayon 開発者(個人)',
+    footer='Dear Crayon · 運営: Planar Figure',
     index=dict(
         links=dict(privacy='集める情報・使い道・消し方', terms='利用の条件・お支払いと返金', delete='記録を消す方法・手順のご案内'),
     ),
@@ -861,7 +861,7 @@ L['ja'] = dict(
                 '親はいつでも、子どもの情報を見る・なおす・消すこと、同意を取り消すことができます(すべてアプリの中ですぐに)。',
             ])]),
             ('6. お問い合わせ', [('ul', [
-                '運営者: Dear Crayon 開発者(個人)',
+                '運営者: Planar Figure',
                 f'連絡先: {MAIL}',
                 f'Web: <a href="{BASE}ja/privacy.html">{BASE}ja/privacy.html</a>',
             ])]),
