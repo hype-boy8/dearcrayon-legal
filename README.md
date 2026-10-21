@@ -22,3 +22,13 @@ Until the public listing exists, PLAY_AVAILABLE=False in tools/landing.py displa
 - NanumSquareRound/Nunito font licenses are retained alongside self-hosted font files. Japanese uses the device's Japanese typeface.
 - Verified six languages at 390px; 320px and desktop edge cases, light/dark views, language selection, Escape and guide opening. Static verification covers local assets and 24 page links; legal body compared against the previous commit.
 - Sharing apps may retain the previous preview in their cache. Site titles and metadata change on deployment, but previously sent messages do not necessarily refresh.
+
+## Teacher invitation page · 2026-10-21
+
+- `/join/#1.<manifest>.<key>` keeps the existing invitation format and app deep link. The fragment is never sent to a server, stored in browser storage, or included in metadata. There are no third-party scripts or analytics.
+- `tools/join.html` is the source template; `tools/join.py` adds six-language presentation copy to the existing `JOIN` copy in `tools/build.py`. Rebuild with the command above; do not edit `join/index.html` directly.
+- Shared logo, fonts, cream background, language disclosure and approved drawing sticker match the introduction page. Primary action opens the app; expandable help groups instructions and link copying. Invalid links hide unusable actions. iPhone/iPad show the existing Android-only notice.
+- Language selection uses `?lang=ko|en|de|fr|es|ja` and preserves the complete invitation fragment. Without an explicit language, the first supported browser language is used. Escape and outside click dismiss the menu.
+- `landing.PLAY_AVAILABLE` is the single release switch for both pages. Before release, installation and Android fallback lead to the localized introduction; after release, they use the registered Google Play URL. The app-opening action remains available for installed Android builds.
+- Verification: six languages at 390px; Korean/German/French/Japanese at 320px; desktop and system-dark appearance; menu keyboard handling; copy success feedback; missing-link state. App installation and a real teacher connection were not performed.
+- Run `node tools/test-join.cjs` after building to check valid/invalid links, language/fragment preservation, copy fallback, iPhone/iPad detection, Android intent and both store-release states. This is a dependency-free script test; responsive appearance is checked separately in the browser.

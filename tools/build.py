@@ -313,80 +313,8 @@ JOIN = {
 
 
 def join_page():
-    import json as _json
-    data = _json.dumps(JOIN, ensure_ascii=False)
-    play = _json.dumps(PLAY)
-    return f"""<!doctype html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<meta name="referrer" content="no-referrer">
-<title>Dear Crayon</title>
-<link rel="stylesheet" href="../assets/site.css">
-<style>
-.join {{ max-width: 520px; margin: 0 auto; padding: 40px 20px 56px; }}
-.join h1 {{ font-size: 26px; line-height: 1.35; margin: 16px 0 12px; }}
-.join .lead {{ color: var(--subtle); margin-bottom: 24px; }}
-.join .btn {{ display: block; text-align: center; padding: 16px; border-radius: 14px; font-weight: 700; text-decoration: none; margin-top: 12px; border: 0; width: 100%; font-size: 17px; cursor: pointer; }}
-.join .primary {{ background: #BA3620; color: #fff; }}
-.join .soft {{ background: var(--soft); color: inherit; border: 1px solid var(--line); }}
-.join ol {{ margin: 28px 0 0; padding-left: 20px; color: var(--subtle); }}
-.join .warn {{ background: #FFF4E5; border-radius: 12px; padding: 12px 14px; margin-top: 16px; }}
-.join .note {{ font-size: 14px; color: var(--subtle); margin-top: 20px; }}
-</style>
-</head>
-<body>
-<main class="join">
-<img src="../assets/logo.png" alt="Dear Crayon" width="96" onerror="this.remove()">
-<h1 id="t"></h1>
-<p class="lead" id="lead"></p>
-<div id="bad" class="warn" hidden></div>
-<div id="ios" class="warn" hidden></div>
-<a id="open" class="btn primary" href="#"></a>
-<a id="get" class="btn soft" href="#"></a>
-<button id="copy" class="btn soft" type="button"></button>
-<ol id="steps"></ol>
-<p class="note" id="note"></p>
-</main>
-<script>
-(function () {{
-  var T = {data};
-  var PLAY = {play};
-  var langs = (navigator.languages || [navigator.language || 'en']).map(function (l) {{ return String(l).slice(0, 2).toLowerCase(); }});
-  var lang = langs.filter(function (l) {{ return T[l]; }})[0] || 'en';
-  var t = T[lang];
-  document.documentElement.lang = lang;
-  var frag = location.hash.slice(1);
-  var ok = /^1\\.[A-Za-z0-9_-]{{10,}}\\.[a-z0-9]{{32}}$/.test(frag);
-  var ios = /iPhone|iPad|iPod/.test(navigator.userAgent);
-  function $(id) {{ return document.getElementById(id); }}
-  $('t').textContent = t.title;
-  $('lead').textContent = t.lead;
-  $('note').textContent = t.note;
-  $('get').textContent = t.get;
-  $('get').href = PLAY;
-  $('open').textContent = t.open;
-  $('copy').textContent = t.copy;
-  t.steps.forEach(function (s) {{ var li = document.createElement('li'); li.textContent = s; $('steps').appendChild(li); }});
-  if (!ok) {{ $('bad').textContent = t.bad; $('bad').hidden = false; $('open').hidden = true; $('copy').hidden = true; }}
-  if (ios) {{ $('ios').textContent = t.ios; $('ios').hidden = false; }}
-  $('open').href = ok
-    ? (/Android/i.test(navigator.userAgent)
-        ? 'intent://join/' + frag + '#Intent;scheme=dearcrayon;package=com.dearcrayon.app;S.browser_fallback_url=' + encodeURIComponent(PLAY) + ';end'
-        : 'dearcrayon://join/' + frag)
-    : '#';
-  $('copy').addEventListener('click', function () {{
-    var done = function () {{ $('copy').textContent = t.copied; }};
-    if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(done, function () {{ window.prompt('', location.href); }});
-    else window.prompt('', location.href);
-  }});
-}})();
-</script>
-</body>
-</html>
-"""
+    from join import render_join
+    return render_join(JOIN, PLAY, BASE)
 
 
 if __name__ == '__main__':
