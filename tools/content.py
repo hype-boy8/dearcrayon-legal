@@ -1062,4 +1062,40 @@ for _lang, _receipt in _RECEIPT_PRIVACY.items():
     _privacy['summary'][0] = _RECEIPT_SUMMARY[_lang]
     _privacy['summary'][3] = _receipt
     _privacy['mdEffective'] = _RECEIPT_DATES[_lang]
-    L[_lang]['effective'] = _RECEIPT_DATES[_lang]
+
+# Canonical app policy, synced by tools/sync_app_privacy.py. This runs after
+# legacy overrides so a later website rebuild cannot restore old billing copy.
+import json as _json
+from pathlib import Path as _Path
+_APP_POLICIES = _json.loads(_Path(__file__).with_name('app_privacy.json').read_text())
+_PURCHASE_SUMMARY = {
+    'ko': '결제는 Google Play 또는 Apple App Store가 처리해요. 소장 확인을 위한 도록·거래 식별자와 구매 시각은 별도 검증 서버에 보관하며, 카드 정보와 아이 기록은 보관하지 않아요.',
+    'en': 'Google Play or Apple App Store handles payments. A separate verification service keeps book and transaction identifiers and purchase times to confirm ownership, without card details or child records.',
+    'ja': '決済はGoogle PlayまたはApple App Storeが処理します。所蔵確認用の本・取引の識別子と購入日時は別の検証サービスに保存しますが、カード情報や子どもの記録は保存しません。',
+    'de': 'Zahlungen erfolgen über Google Play oder den Apple App Store. Ein separater Prüfdienst speichert Buch- und Transaktionskennungen sowie Kaufzeitpunkte, jedoch keine Kartendaten oder Kindereinträge.',
+    'fr': 'Google Play ou l’Apple App Store traite les paiements. Un service distinct conserve les identifiants du livre et de la transaction ainsi que la date d’achat pour vérifier les droits, sans données de carte ni souvenirs de l’enfant.',
+    'es': 'Google Play o Apple App Store procesa los pagos. Un servicio separado guarda identificadores del libro y de la transacción y la fecha de compra para comprobar los derechos, sin datos de tarjeta ni recuerdos del niño.',
+}
+for _lang, _policy in _APP_POLICIES.items():
+    L[_lang]['privacy'].update(_policy)
+    L[_lang]['privacy']['summary'][-1] = _PURCHASE_SUMMARY[_lang]
+    # The developer-server row and help copy previously incorrectly said there
+    # was nothing to delete. Reuse the app's precise retention/contact copy.
+    _retention = _policy['sections'][3][1][-1][1][-1]
+    _delete_sections = L[_lang]['delete']['sections']
+    _delete_sections[0] = (_delete_sections[0][0], [('p', _policy['sections'][0][1][0][1][1]), ('p', _retention)])
+    _server_row = _delete_sections[-2][1][0][1][-1]
+    _server_row = (_server_row[0], _retention)
+    _delete_sections[-2][1][0][1][-1] = _server_row
+    _delete_sections[-1] = (_delete_sections[-1][0], [('p', _retention), ('p', MAIL)])
+
+_IOS_DELETE = {
+ 'ko': '<strong>iPhone·iPad:</strong> 설정 › 일반 › iPhone(iPad) 저장 공간 › Dear Crayon › 앱 삭제에서 앱 데이터를 지울 수 있어요. ‘앱 정리하기’는 데이터를 남겨요. iCloud·Finder 기기 백업과 직접 만든 백업 파일은 보관한 곳에서 별도로 관리해 주세요.',
+ 'en': '<strong>iPhone and iPad:</strong> go to Settings › General › iPhone (iPad) Storage › Dear Crayon › Delete App to remove app data. Offload App keeps the data. Manage iCloud/Finder device backups and your own backup files separately where you saved them.',
+ 'ja': '<strong>iPhone・iPad:</strong> 設定 › 一般 › iPhone（iPad）ストレージ › Dear Crayon › アプリを削除でデータを削除できます。「アプリを取り除く」ではデータが残ります。iCloud・Finderのデバイスバックアップと自分で作成したバックアップは、保存先で別途管理してください。',
+ 'de': '<strong>iPhone und iPad:</strong> Einstellungen › Allgemein › iPhone-(iPad-)Speicher › Dear Crayon › App löschen entfernt die App-Daten. „App auslagern“ behält die Daten. Verwalte iCloud-/Finder-Gerätebackups und eigene Sicherungsdateien separat am jeweiligen Speicherort.',
+ 'fr': '<strong>iPhone et iPad :</strong> Réglages › Général › Stockage iPhone (iPad) › Dear Crayon › Supprimer l’app efface les données. « Décharger l’app » conserve les données. Gérez séparément les sauvegardes de l’appareil iCloud/Finder et vos propres fichiers à leur emplacement.',
+ 'es': '<strong>iPhone y iPad:</strong> Ajustes › General › Almacenamiento del iPhone (iPad) › Dear Crayon › Eliminar app borra los datos. « Desinstalar app » conserva los datos. Gestiona por separado las copias del dispositivo en iCloud/Finder y tus archivos de copia donde los guardaste.',
+}
+for _lang, _note in _IOS_DELETE.items():
+    L[_lang]['delete']['sections'][3][1].append(('p', _note))

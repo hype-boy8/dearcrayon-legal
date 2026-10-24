@@ -125,11 +125,11 @@
       if (choice === lang) link.setAttribute('aria-current', 'true');
       else link.removeAttribute('aria-current');
     });
-    $('store-note').textContent = AVAILABLE ? t.needApp : t.coming;
-    $('get').textContent = AVAILABLE ? t.get : t.install;
-    $('get').href = AVAILABLE ? PLAY : home();
+    $('store-note').textContent = isIos ? t.needApp : (AVAILABLE ? t.needApp : t.coming);
+    $('get').textContent = AVAILABLE && !isIos ? t.get : t.install;
+    $('get').href = AVAILABLE && !isIos ? PLAY : home();
     $('open').textContent = t.open;
-    $('open').hidden = !ok || !isAndroid;
+    $('open').hidden = !ok || !(isAndroid || isIos);
     var fallback = AVAILABLE ? PLAY : new URL(home(), location.href).href;
     if (ok) $('open').href = isAndroid
       ? 'intent://join/' + frag + '#Intent;scheme=dearcrayon;package=com.dearcrayon.app;S.browser_fallback_url=' + encodeURIComponent(fallback) + ';end'
@@ -147,7 +147,7 @@
     $('manual-copy').hidden = true;
     $('manual-link').value = '';
     $('manual-label').textContent = t.manual;
-    $('join-footer').hidden = !AVAILABLE;
+    $('join-footer').hidden = !AVAILABLE || isIos;
     $('about').textContent = t.about;
     $('about').href = home();
     $('brand-home').href = home();

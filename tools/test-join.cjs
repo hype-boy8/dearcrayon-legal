@@ -56,7 +56,12 @@ function setup({hash='#'+token, lang='ko', ua='Desktop', platform='', touches=0,
   assert.equal(new URL(fallback.element('manual-link').value).hash,'#'+token);
   assert.equal(fallback.element('manual-link').selected,true);
   for (const opts of [{ua:'iPhone'},{platform:'MacIntel',touches:5}]) {
-    const i=setup(opts); assert.equal(i.element('ios').hidden,false); assert.equal(i.element('open').hidden,true);
+    const i=setup(opts); assert.equal(i.element('ios').hidden,false); assert.equal(i.element('open').hidden,false);
+    assert.equal(i.element('open').href,'dearcrayon://join/'+token);
+    const live=setup({...opts,released:true});
+    assert.equal(live.element('get').href,'../');
+    assert.equal(live.element('join-footer').hidden,true);
+    assert.equal(setup({...opts,hash:'#bad'}).element('open').hidden,true);
   }
   assert.equal(setup({ua:'Android'}).element('open').hidden,false);
   const android=setup({ua:'Android'}).element('open').href;

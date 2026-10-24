@@ -1,0 +1,560 @@
+{
+  "ko": {
+    "intro": "Dear Crayon은 부모가 아이의 그림과 목소리를 기록하는 앱이에요. 아이가 혼자 쓰도록 만든 앱이 아니며, 아이의 정보는 부모(법정대리인)가 직접 입력하고 관리해요.",
+    "mdEffective": "시행일: 2026년 10월 23일",
+    "sections": [
+      [
+        "1. 다루는 정보와 저장하는 곳",
+        [
+          [
+            "ul",
+            [
+              "아이 이름 · 생년월일 · 작가 이름 · 프로필 사진, 작품 사진, 아이 목소리 녹음, 아이가 한 말과 답, 이달의 한마디, 부모 메모, 앱 설정.",
+              "아이의 기록은 이 휴대폰의 앱 저장소에 있고, 자동 백업을 켠 경우에만 부모 본인의 구글 드라이브에도 저장돼요. 회원 가입은 없고, 개발자는 아이의 기록을 받거나 서버에 저장하지 않아요. 구글 로그인은 드라이브 백업에 써요. 구매 확인용 정보는 아래에서 따로 설명해요.",
+              "광고, 사용 분석, 위치 정보를 쓰지 않아요.",
+              "안드로이드 시스템 자동 백업은 꺼져 있어요. 앱 안의 백업은 부모가 직접 만드는 파일(zip)과, 부모가 켜는 선택 기능인 구글 드라이브 자동 백업(처음엔 꺼져 있어요) 두 가지예요.",
+              "iOS의 기기 백업은 사용자가 설정한 iCloud·Finder 백업 설정을 따라요. 앱이 별도로 iCloud 동기화를 제공하는 것은 아니에요."
+            ]
+          ]
+        ]
+      ],
+      [
+        "2. 휴대폰 밖으로 나가는 경우",
+        [
+          [
+            "ul",
+            [
+              "<strong>목소리를 글로 바꾸기(선택):</strong> 처음 녹음할 때 부모가 허락한 경우에만, 글로 바꿀 녹음 파일과 언어 설정을 Dear Crayon 중계 서버(Cloudflare Workers)로 보내요. 중계 서버는 Cloudflare Workers AI(Whisper 음성 인식, Cloudflare, Inc., 미국)로 글을 만들어 돌려주고, 녹음과 글을 저장하지 않아요. 아이 이름 같은 다른 기록은 보내지 않아요. 언제든 설정 › 개인정보에서 끌 수 있고, 끄면 아무것도 보내지 않아요.",
+              "<strong>구글 드라이브 자동 백업(선택):</strong> 처음엔 꺼져 있어요. 부모가 구글로 로그인해 켜면(첫 화면 ‘Google로 시작하기’ 또는 우리 아이 › 백업 · 내보내기), 백업 파일과 같은 내용 — 아이 정보, 원본 화질 작품 사진, 목소리 녹음, 답과 아이가 한 말, 한마디, 부모 메모, 가족에게 받은 도록 — 을 <strong>부모 본인의 구글 드라이브</strong> 안 앱 전용 숨김 공간에 올려요(구글 권한 drive.appdata). 이 공간은 드라이브 화면에 보이지 않고 저장 용량만 써요. 앱은 드라이브의 다른 파일을 볼 수 없어요. 기록은 휴대폰과 구글 드라이브(Google LLC) 사이를 바로 오가고 개발자 서버를 거치거나 저장되지 않아서, 개발자는 볼 수 없어요. 기본은 와이파이에서만, 앱이 열려 있을 때만 올리고(스위치로 모바일 데이터 허용), 앱에서 지운 것은 다음에 올릴 때 드라이브 백업에서도 지워요. 어느 계정을 쓰는지 보여 주려고 로그인한 계정의 이메일 주소를 이 휴대폰에만 저장해요.",
+              "<strong>선생님 공간(선택, 어린이집 · 학원 선생님용):</strong> 선생님이 원 구글 계정을 연결하면 반 이름, 반 아이 이름과 선생님이 찍은 작품 사진 · 수업 주제 · 선생님 한 줄을 <strong>그 원 계정의 구글 드라이브</strong>에 올려요(구글 권한 drive.file — 이 앱이 만든 파일만, drive.appdata — 반 상태를 숨은 공간에). 사진과 목록은 잠겨서(AES-256) 올라가고, 아이별 링크를 받은 부모의 앱에서만 열려요. 링크가 있으면 잠긴 파일을 받을 수는 있지만 링크 안의 열쇠 없이는 열 수 없어요. 개발자 서버를 거치지 않아 개발자는 볼 수 없어요. 반 아이 사진을 찍어 보호자에게 전하는 데 필요한 동의는 기관이 받아요. 원 드라이브 화면에는 반 이름 · 원 이름이 폴더 이름으로 보이고, 아이 폴더는 이름 대신 번호예요. 아이 이름과 열쇠가 든 반 상태는 원 계정의 앱 전용 숨은 공간에 있어요. 어느 계정을 쓰는지 보여 주려고 원 계정 이메일을 이 휴대폰에만 저장해요. 선생님이 반 아이 얼굴 사진을 넣으면(선택, 아이를 알아보기 쉽게) 그 사진은 이 휴대폰에만 있고 드라이브나 부모님께 가지 않아요.",
+              "<strong>선생님과 연결(선택):</strong> 부모가 선생님이 보낸 아이별 링크로 연결하면, 앱을 열 때 그 링크의 목록과 새 작품 사진을 로그인 없이 구글 드라이브에서 받아 이 휴대폰에 저장해요. 연결을 끊으면 더 받지 않고, 이미 받은 작품은 다른 기록처럼 지울 수 있어요. 반 이름 · 선생님 이름 · 수업 주제 · 선생님 한 줄도 함께 이 휴대폰에 저장돼요. 받을 때 구글은 일반 다운로드처럼 휴대폰의 접속 정보(IP 주소)를 받아요.",
+              "<strong>도록 PDF 구매:</strong> 구글 플레이가 결제 수단과 청구 정보를 처리하며 개발자는 카드 정보를 받지 않아요. 구매를 사용할 때 앱은 구매 토큰과 이름을 담지 않은 도록 식별자를 Dear Crayon 검증 서버(Cloudflare Workers)를 거쳐 Google Play에 확인해요. 서버에는 중복 처리 방지와 소장 확인을 위해 도록 식별자, 주문 번호, 구매 시각과 확인 시각을 보관해요. 구매 토큰 자체와 아이 이름·생일·사진·목소리는 검증 서버에 저장하지 않아요. 앱의 구매 확인 기록은 이 폰과 부모가 만드는 백업에 함께 담겨요. 주문 정보는 구매 확인·환불·문의 대응에 사용해요.",
+              "<strong>iOS에서 도록 PDF 구매:</strong> 결제수단은 Apple App Store가 처리하며 운영자는 카드 정보를 받지 않아요. 앱은 Apple이 서명한 거래 정보와 개인 정보를 담지 않은 도록 식별자를 Apple 전용 검증 서버(Cloudflare Workers)로 보내요. 서버는 Apple의 서명과 최신 거래·환불 상태를 확인하고 도록 식별자·거래번호·구매시각을 저장해 중복 사용을 막아요. 원본 서명 거래 정보와 아이 이름·사진·목소리는 이 검증 저장소에 보관하지 않아요. 구매 기록은 부모가 만드는 백업에도 포함돼요.",
+              "<strong>부모가 직접 보내는 파일:</strong> 이달의 카드, 도록 PDF, 도록 파일, 백업 파일은 부모가 고른 앱(메신저 · 메일 등)으로 직접 보낼 때만 나가요. 받은 사람이 그 파일을 갖게 돼요.",
+              "부모 연결 확인: 부모가 선생님 링크에서 아이를 골라 연결을 완료하면, 링크에서 별도로 만든 확인값과 연결 확인 시각을 Cloudflare Workers KV에 저장해 선생님 앱에서 확인할 수 있게 해요. 이름·사진·목소리·드라이브 파일 번호·링크 암호키는 보내거나 저장하지 않아요. 연결을 끊은 뒤에도 과거 연결 확인 기록은 남을 수 있으며, 현재 접속이나 연결 해제를 실시간 추적하는 기능은 아니에요. 확인 기록은 자동 갱신하지 않고 보관하며, 삭제 문의는 아래 연락처로 할 수 있어요. Cloudflare는 요청 처리 과정에서 접속 정보를 받아요."
+            ]
+          ]
+        ]
+      ],
+      [
+        "3. 휴대폰 권한",
+        [
+          [
+            "ul",
+            [
+              "카메라: 작품 사진을 찍을 때.",
+              "마이크: 아이 목소리를 녹음할 때.",
+              "알림: 매달 이야기 · 생일 알림. 거절해도 나머지 기능은 그대로 쓸 수 있어요."
+            ]
+          ]
+        ]
+      ],
+      [
+        "4. 보관 기간과 지우는 법",
+        [
+          [
+            "ul",
+            [
+              "기록은 부모가 지우기 전까지 이 휴대폰에 남아요. 구글 드라이브 자동 백업을 켰다면 드라이브 백업도 부모가 지우기 전까지 부모의 구글 계정에 남아요.",
+              "작품 · 답 · 한마디는 앱 안에서 하나씩 지울 수 있고, 아이를 지우면 그 아이의 모든 기록과 파일이 지워져요.",
+              "앱을 지우면 이 휴대폰 안의 모든 기록이 지워져요. 드라이브 백업은 앱을 지워도 남으니 아래 방법으로 지워 주세요. 백업 파일과 보낸 파일은 부모가 보관한 곳에서 직접 지워 주세요.",
+              "<strong>드라이브 백업 지우기:</strong> ‘계정 연결 해제’는 로그아웃하고 올리기를 멈출 뿐, 드라이브의 백업은 남겨 둬요. 앱의 <strong>드라이브의 백업 지우기</strong>로 드라이브 백업 전체를 지울 수 있어요. 앱 없이도 구글 드라이브 › 설정 › 앱 관리 › Dear Crayon › 숨겨진 앱 데이터 삭제로 지울 수 있고, 구글 계정 › 보안 › 서드 파티 앱에서 접근 권한을 거둘 수 있어요.",
+              "아이의 기록은 개발자 서버에 없고, 드라이브 백업은 부모가 직접 지울 수 있어요. 별도로 보관되는 구매 확인용 주문 정보에 관한 문의·삭제 요청은 아래 연락처로 보내 주세요. 구매 기록을 삭제하면 소장 확인과 지원이 제한될 수 있어요."
+            ]
+          ]
+        ]
+      ],
+      [
+        "5. 아이 개인정보 보호",
+        [
+          [
+            "ul",
+            [
+              "미국 아동 온라인 개인정보 보호법(COPPA), 유럽 개인정보 보호법(GDPR)의 아동 규정, 한국 개인정보 보호법에 따라, 아이 목소리를 서버로 보내기 전에 부모의 동의를 받아요. 구글 드라이브 자동 백업도 부모가 직접 로그인해 켤 때만 동작해요.",
+              "부모는 언제든 아이 정보를 보고 · 고치고 · 지우고, 동의를 거둘 수 있어요(모두 앱 안에서 바로)."
+            ]
+          ]
+        ]
+      ],
+      [
+        "6. 문의",
+        [
+          [
+            "ul",
+            [
+              "운영자: 플래너피규어(Planar Figure)",
+              "연락처: planarfigure@gmail.com",
+              "웹: <a href=\"https://hype-boy8.github.io/dearcrayon-legal/privacy.html\">https://hype-boy8.github.io/dearcrayon-legal/privacy.html</a>"
+            ]
+          ]
+        ]
+      ]
+    ],
+    "closing": "이 방침이 바뀌면 앱과 이 페이지의 시행일을 바꿔 알려 드려요."
+  },
+  "en": {
+    "intro": "Dear Crayon is an app for parents to record their child’s drawings and voice. It is not designed for children to use on their own; a parent (legal guardian) enters and manages the child’s information.",
+    "mdEffective": "Effective: October 23, 2026",
+    "sections": [
+      [
+        "1. What we handle and where it is stored",
+        [
+          [
+            "ul",
+            [
+              "Child’s name, date of birth, artist name and profile photo; photos of artworks; recordings of the child’s voice; what the child said and answered; quotes; parent notes; app settings.",
+              "Child records stay in this phone’s app storage, and in the parent’s own Google Drive only if auto backup is enabled. There is no app registration; the developer does not receive or store these child records on a server. Google sign-in is used for Drive backup. Purchase verification data is described separately below.",
+              "We do not use advertising, usage analytics or location.",
+              "Android’s system Auto Backup is turned off. The app offers two kinds of backup: files (zip) that a parent creates, and the optional Google Drive auto backup that a parent turns on (off by default).",
+              "On iOS, device backups follow your iCloud or Finder settings. The app does not separately provide iCloud synchronization."
+            ]
+          ]
+        ]
+      ],
+      [
+        "2. When something leaves the phone",
+        [
+          [
+            "ul",
+            [
+              "<strong>Voice-to-text (optional):</strong> only if a parent allows it at the first recording, the recording to be transcribed and the language setting are sent to the Dear Crayon relay server (Cloudflare Workers). The relay server has the text produced by Cloudflare Workers AI (Whisper speech recognition, Cloudflare, Inc., United States), returns it, and stores neither the recording nor the text. No other records, such as the child’s name, are sent. You can turn this off anytime in Settings › Privacy; when off, nothing is sent.",
+              "<strong>Google Drive auto backup (optional):</strong> off by default. If a parent signs in with Google and turns it on (“Continue with Google” on the first screen, or My Kids › Backup &amp; export), the same contents as a backup file — child info, artwork photos in original quality, voice recordings, answers and the child’s words, quotes, parent notes and books received from family — are uploaded to a hidden, app-only folder in <strong>the parent’s own Google Drive</strong> (Google permission drive.appdata). This folder does not appear in the Drive interface; it only uses storage. The app cannot see any other files in your Drive. Data goes directly between the phone and Google Drive (Google LLC); it does not pass through or get stored on any developer server, so the developer cannot see it. By default it uploads only on Wi‑Fi and only while the app is open (a switch allows mobile data). Items deleted in the app are also deleted from the Drive backup at the next upload. The email address of the signed-in account is kept on this phone only, to show which account is used.",
+              "<strong>Teacher space (optional, for preschool and art class teachers):</strong> if a teacher connects the school’s Google account, the class name, children’s names and the artwork photos, activity and teacher’s note they take are uploaded to <strong>that school account’s Google Drive</strong> (Google permissions drive.file — only files this app created, and drive.appdata — class state in a hidden space). Photos and lists are uploaded locked (AES-256) and open only in the app of parents who received the child’s link. Anyone with the link can download the locked files, but they cannot be opened without the key inside the link. Nothing passes through a developer server, so the developer cannot see it. The school is responsible for consent to photograph children and share the photos with their parents. In the school’s Drive, the class and school names appear as folder names; each child’s folder has a number instead of a name. The class state with children’s names and keys is kept in the school account’s hidden app-only space. The school account’s email is stored on this phone only, to show which account is used. If a teacher adds children’s face photos (optional, to recognize them more easily), those photos stay on this phone only and are never uploaded to Drive or sent to parents.",
+              "<strong>Connect with teachers (optional):</strong> if a parent connects using the child’s link a teacher sent, the app downloads that link’s list and new artwork photos from Google Drive without signing in, whenever the app opens, and saves them on this phone. Disconnecting stops new downloads; artwork already received can be deleted like any other record. The class and teacher names, activity and teacher’s note are also saved on this phone. When downloading, Google receives the phone’s connection information (IP address), as with any download.",
+              "<strong>Buying the book PDF:</strong> Google Play handles payment methods and billing details; the developer does not receive card details. To use a purchase, the app sends its purchase token and an opaque book identifier through the Dear Crayon verification service (Cloudflare Workers) to Google Play. To prevent duplicate use and confirm ownership, the service stores the book identifier, order number, purchase time and verification time. It does not store the raw purchase token or the child’s name, birth date, photos or voice. The purchase journal stays on this phone and is included in backups made by the parent. Order information is used for purchase verification, refunds and support.",
+              "<strong>Book PDF purchases on iOS:</strong> Apple App Store handles payment methods; the developer does not receive card details. The app sends an Apple-signed transaction and an anonymous book identifier to a separate Apple verification service on Cloudflare Workers. It verifies Apple’s signature and current transaction/refund state and stores the book identifier, transaction number and purchase time to prevent duplicate use. Raw signed transactions, child names, photos and voice recordings are not stored in this verification ledger. Purchase records are included in parent-created backups.",
+              "<strong>Files a parent shares:</strong> monthly cards, book PDFs, book files and backup files leave the phone only when a parent sends them through an app they choose (messaging, email, etc.). The recipient then has that file.",
+              "Parent connection confirmation: When a parent selects a child and completes a teacher-link connection, a separately derived confirmation value and confirmation time are stored in Cloudflare Workers KV for the teacher to check. Names, photos, voice recordings, Drive file IDs and link encryption keys are neither sent nor stored. Historical confirmation may remain after disconnection; this does not track current presence or disconnection in real time. The confirmation record is retained without automatic renewal; contact us below for deletion requests. Cloudflare receives connection information when handling requests."
+            ]
+          ]
+        ]
+      ],
+      [
+        "3. Phone permissions",
+        [
+          [
+            "ul",
+            [
+              "Camera: to photograph artworks.",
+              "Microphone: to record the child’s voice.",
+              "Notifications: monthly story and birthday reminders. Everything else still works if you decline."
+            ]
+          ]
+        ]
+      ],
+      [
+        "4. Retention and deletion",
+        [
+          [
+            "ul",
+            [
+              "Records stay on this phone until a parent deletes them. If Google Drive auto backup is on, the Drive backup also stays in the parent’s Google account until the parent deletes it.",
+              "Artworks, answers and quotes can be deleted one by one in the app; deleting a child deletes all of that child’s records and files.",
+              "Deleting the app deletes every record on this phone. The Drive backup remains even if you delete the app, so delete it as described below. Please delete backup files and shared files yourself wherever you saved them.",
+              "<strong>Deleting the Drive backup:</strong> “Disconnect account” signs out and stops uploads, but leaves the backup in Drive. <strong>Delete backup from Drive</strong> in the app deletes the whole Drive backup. Without the app, you can delete it in Google Drive › Settings › Manage apps › Dear Crayon › Delete hidden app data, and revoke access in Google Account › Security › Third-party apps.",
+              "Child records are not on a developer server, and parents can delete their Drive backup themselves. For questions or deletion requests about separately stored purchase-verification records, contact us below. Deleting those records may limit ownership verification and support."
+            ]
+          ]
+        ]
+      ],
+      [
+        "5. Children’s privacy",
+        [
+          [
+            "ul",
+            [
+              "In line with COPPA (US), the GDPR rules for children (EU/UK) and the Korean Personal Information Protection Act, we ask for a parent’s consent before any of the child’s voice is sent to a server. Google Drive auto backup also works only after a parent signs in and turns it on.",
+              "Parents can review, correct or delete the child’s information and withdraw consent at any time, directly in the app."
+            ]
+          ]
+        ]
+      ],
+      [
+        "6. Contact",
+        [
+          [
+            "ul",
+            [
+              "Operator: Planar Figure",
+              "Email: planarfigure@gmail.com",
+              "Web: <a href=\"https://hype-boy8.github.io/dearcrayon-legal/en/privacy.html\">https://hype-boy8.github.io/dearcrayon-legal/en/privacy.html</a>"
+            ]
+          ]
+        ]
+      ]
+    ],
+    "closing": "If this policy changes, we will update the effective date in the app and on this page."
+  },
+  "ja": {
+    "intro": "Dear Crayon は、親が子どもの絵と声を記録するアプリです。子どもがひとりで使うためのアプリではなく、子どもの情報は親(法定代理人)が入力し、管理します。",
+    "mdEffective": "施行日: 2026年10月23日",
+    "sections": [
+      [
+        "1. 扱う情報と保存場所",
+        [
+          [
+            "ul",
+            [
+              "子どもの名前・生年月日・作家名・プロフィール写真、作品の写真、子どもの声の録音、子どもが話したことと答え、今月のひとこと、親のメモ、アプリの設定。",
+              "子どもの記録はこのスマートフォンのアプリ内に保存され、自動バックアップを有効にした場合のみ保護者自身の Google ドライブにも保存されます。会員登録はなく、開発者は子どもの記録を受け取ったりサーバーに保存したりしません。Google ログインはドライブのバックアップに使用します。購入確認の情報は下で別に説明します。",
+              "広告、利用分析、位置情報は使いません。",
+              "Android システムの自動バックアップはオフにしています。アプリ内のバックアップは、親が自分で作るファイル(zip)と、親がオンにする任意の Google ドライブ自動バックアップ(最初はオフ)の2つです。",
+              "iOSの端末バックアップは、お使いのiCloud・Finderの設定に従います。アプリ独自のiCloud同期機能はありません。"
+            ]
+          ]
+        ]
+      ],
+      [
+        "2. スマートフォンの外に出る場合",
+        [
+          [
+            "ul",
+            [
+              "<strong>声を文字にする(任意):</strong> はじめて録音するときに親が許可した場合にかぎり、文字にする録音ファイルと言語設定を Dear Crayon の中継サーバー(Cloudflare Workers)へ送ります。中継サーバーは Cloudflare Workers AI(Whisper 音声認識、Cloudflare, Inc.、アメリカ)で文字を作って返し、録音も文字も保存しません。子どもの名前など、ほかの記録は送りません。設定 › プライバシーからいつでもオフにでき、オフにすると何も送りません。",
+              "<strong>Google ドライブ自動バックアップ(任意):</strong> 最初はオフです。親が Google でログインしてオンにすると(最初の画面の「Google で始める」、または うちの子 › バックアップ)、バックアップファイルと同じ内容 — 子どもの情報、元の画質の作品の写真、声の録音、答えと子どもが話したこと、ひとこと、親のメモ、家族から届いた作品集 — を<strong>親自身の Google ドライブ</strong>の、アプリ専用の非表示フォルダにアップロードします(Google の権限 drive.appdata)。このフォルダはドライブの画面には表示されず、保存容量だけを使います。アプリがドライブのほかのファイルを見ることはできません。記録はスマートフォンと Google ドライブ(Google LLC)のあいだを直接やりとりし、開発者のサーバーを通ったり保存されたりしないため、開発者は見ることができません。初期設定では Wi‑Fi のときだけ、アプリを開いているあいだだけアップロードします(スイッチでモバイルデータも許可できます)。アプリで消したものは、次のアップロードのときにドライブのバックアップからも消えます。どのアカウントを使っているかを表示するため、ログインしたアカウントのメールアドレスをこのスマートフォンにだけ保存します。",
+              "<strong>先生スペース(任意・保育園や絵画教室の先生向け):</strong> 先生が園の Google アカウントを連携すると、クラス名、子どもの名前、先生が撮った作品の写真・活動・先生のひとことを<strong>その園アカウントの Google ドライブ</strong>にアップロードします(Google の権限 drive.file — このアプリが作ったファイルだけ、drive.appdata — クラスの状態を非表示の場所に)。写真と一覧はロック(AES-256)してアップロードされ、子どもごとのリンクを受け取った保護者のアプリでだけ開きます。リンクがあればロックされたファイルを受け取れますが、リンクの中の鍵がなければ開けません。開発者のサーバーを通らないため、開発者は見ることができません。子どもの写真を撮って保護者に届けるための同意は園が取ります。 園のドライブの画面には、クラス名・園の名前がフォルダ名として表示され、子どものフォルダは名前ではなく番号になります。子どもの名前と鍵を含むクラスの状態は、園アカウントのアプリ専用の非表示の場所に保存します。どのアカウントを使っているかを表示するため、園アカウントのメールアドレスをこのスマートフォンにだけ保存します。先生が子どもの顔写真を入れた場合(任意・見分けやすくするため)、その写真はこのスマートフォンにだけあり、ドライブや保護者には送られません。",
+              "<strong>先生と連携(任意):</strong> 保護者が先生から届いた子どもごとのリンクで連携すると、アプリを開くたびにそのリンクの一覧と新しい作品の写真を、ログインなしで Google ドライブから受け取り、このスマートフォンに保存します。連携を解除すると新しく受け取らなくなり、受け取った作品はほかの記録と同じように消せます。 クラス名・先生の名前・活動・先生のひとこともこのスマートフォンに保存されます。受け取るとき、Google は通常のダウンロードと同じようにスマートフォンの接続情報(IP アドレス)を受け取ります。",
+              "<strong>図録 PDF の購入:</strong> 支払方法や請求情報は Google Play が扱い、開発者はカード情報を受け取りません。購入を利用する際、購入トークンと名前を含まない図録識別子を Dear Crayon の確認サーバー（Cloudflare Workers）経由で Google Play に確認します。重複処理の防止と所有確認のため、図録識別子・注文番号・購入日時・確認日時をサーバーに保存します。購入トークンそのものや子どもの名前・生年月日・写真・声は保存しません。購入記録はこの端末と保護者が作るバックアップに含まれます。注文情報は購入確認・返金・問い合わせ対応に使います。",
+              "<strong>iOSでの作品集PDF購入:</strong> 支払い方法はApple App Storeが処理し、運営者はカード情報を受け取りません。Appleが署名した取引情報と、個人情報を含まない作品集識別子を、Apple専用の検証サービス（Cloudflare Workers）へ送信します。Appleの署名と最新の取引・返金状態を確認し、重複利用を防ぐため作品集識別子・取引番号・購入日時を保存します。署名取引の原文、お子さまの名前・写真・音声はこの検証記録に保存しません。購入記録は保護者が作成するバックアップにも含まれます。",
+              "<strong>親が自分で送るファイル:</strong> 今月のカード、作品集PDF、作品集ファイル、バックアップファイルは、親が選んだアプリ(メッセージアプリ・メールなど)で自分で送るときだけ外に出ます。受け取った人がそのファイルを持つことになります。",
+              "保護者の接続確認: 保護者が先生のリンクで子どもを選び接続を完了すると、リンクから別に生成した確認値と確認日時をCloudflare Workers KVに保存し、先生のアプリで確認できるようにします。名前・写真・音声・DriveのファイルID・リンクの暗号鍵は送信・保存しません。接続解除後も過去の確認記録が残る場合があり、現在の接続や解除をリアルタイムに追跡する機能ではありません。確認記録は自動更新せず保管します。削除のご相談は下記へご連絡ください。Cloudflareはリクエスト処理時に接続情報を受け取ります。"
+            ]
+          ]
+        ]
+      ],
+      [
+        "3. スマートフォンの権限",
+        [
+          [
+            "ul",
+            [
+              "カメラ: 作品の写真を撮るとき。",
+              "マイク: 子どもの声を録音するとき。",
+              "通知: 毎月のおはなし・誕生日のお知らせ。許可しなくても、ほかの機能はそのまま使えます。"
+            ]
+          ]
+        ]
+      ],
+      [
+        "4. 保存期間と消し方",
+        [
+          [
+            "ul",
+            [
+              "記録は、親が消すまでこのスマートフォンに残ります。Google ドライブ自動バックアップをオンにした場合、ドライブのバックアップも親が消すまで親の Google アカウントに残ります。",
+              "作品・答え・ひとことはアプリの中でひとつずつ消せます。子どもを削除すると、その子のすべての記録とファイルが消えます。",
+              "アプリを削除すると、このスマートフォンの中のすべての記録が消えます。ドライブのバックアップはアプリを削除しても残るため、下の方法で消してください。バックアップファイルや送ったファイルは、保存した場所でご自身で消してください。",
+              "<strong>ドライブのバックアップを消す:</strong>「アカウントの接続を解除」はログアウトしてアップロードを止めるだけで、ドライブのバックアップは残ります。アプリの<strong>ドライブのバックアップを削除</strong>で、ドライブのバックアップ全体を消せます。アプリがなくても、Google ドライブ › 設定 › アプリの管理 › Dear Crayon › 非表示のアプリデータを削除 で消せます。Google アカウント › セキュリティ › サードパーティ製アプリ から、アクセス権を取り消せます。",
+              "子どもの記録は開発者のサーバーにはなく、ドライブのバックアップは保護者が削除できます。別途保存される購入確認の注文情報についての問い合わせ・削除依頼は下記へご連絡ください。削除すると所有確認やサポートが制限される場合があります。"
+            ]
+          ]
+        ]
+      ],
+      [
+        "5. 子どもの個人情報の保護",
+        [
+          [
+            "ul",
+            [
+              "アメリカの児童オンラインプライバシー保護法(COPPA)、ヨーロッパの一般データ保護規則(GDPR)の子どもに関する規定、韓国の個人情報保護法、日本の個人情報保護法にしたがい、子どもの声をサーバーへ送る前に親の同意をいただきます。Google ドライブ自動バックアップも、親が自分でログインしてオンにしたときだけ動きます。",
+              "親はいつでも、子どもの情報を見る・なおす・消すこと、同意を取り消すことができます(すべてアプリの中ですぐに)。"
+            ]
+          ]
+        ]
+      ],
+      [
+        "6. お問い合わせ",
+        [
+          [
+            "ul",
+            [
+              "運営者: Planar Figure",
+              "連絡先: planarfigure@gmail.com",
+              "Web: <a href=\"https://hype-boy8.github.io/dearcrayon-legal/ja/privacy.html\">https://hype-boy8.github.io/dearcrayon-legal/ja/privacy.html</a>"
+            ]
+          ]
+        ]
+      ]
+    ],
+    "closing": "このポリシーが変わるときは、アプリとこのページの施行日を更新してお知らせします。"
+  },
+  "de": {
+    "intro": "Dear Crayon ist eine App für Eltern, um die Bilder und die Stimme ihres Kindes festzuhalten. Sie ist nicht dafür gedacht, dass Kinder sie allein benutzen; die Angaben zum Kind trägt ein Elternteil (Erziehungsberechtigte) ein und verwaltet sie.",
+    "mdEffective": "Gültig ab: 23. Oktober 2026",
+    "sections": [
+      [
+        "1. Welche Daten wir verarbeiten und wo sie gespeichert werden",
+        [
+          [
+            "ul",
+            [
+              "Name, Geburtsdatum, Künstlername und Profilfoto des Kindes; Fotos der Kunstwerke; Aufnahmen der Stimme des Kindes; was das Kind gesagt und geantwortet hat; Zitate; Notizen der Eltern; App-Einstellungen.",
+              "Die Einträge des Kindes bleiben im App-Speicher dieses Handys und nur bei aktivierter Sicherung zusätzlich im eigenen Google Drive der Eltern. Es gibt keine App-Registrierung. Der Entwickler erhält diese Einträge nicht und speichert sie nicht auf einem Server. Die Google-Anmeldung dient der Drive-Sicherung. Kaufprüfdaten werden unten gesondert beschrieben.",
+              "Wir verwenden keine Werbung, keine Nutzungsanalyse und keinen Standort.",
+              "Die automatische Systemsicherung von Android ist ausgeschaltet. Die App bietet zwei Arten der Sicherung: Dateien (zip), die ein Elternteil selbst erstellt, und die freiwillige automatische Google-Drive-Sicherung, die ein Elternteil einschaltet (anfangs aus).",
+              "Auf iOS richten sich Gerätesicherungen nach deinen iCloud- oder Finder-Einstellungen. Die App bietet keine eigene iCloud-Synchronisierung."
+            ]
+          ]
+        ]
+      ],
+      [
+        "2. Wann etwas das Handy verlässt",
+        [
+          [
+            "ul",
+            [
+              "<strong>Sprache-zu-Text (freiwillig):</strong> Nur wenn ein Elternteil es bei der ersten Aufnahme erlaubt, werden die zu verschriftende Aufnahme und die Spracheinstellung an den Dear-Crayon-Relay-Server (Cloudflare Workers) gesendet. Der Relay-Server lässt den Text von Cloudflare Workers AI (Whisper-Spracherkennung, Cloudflare, Inc., USA) erstellen, gibt ihn zurück und speichert weder Aufnahme noch Text. Andere Einträge, etwa der Name des Kindes, werden nicht gesendet. Du kannst das jederzeit unter Einstellungen › Datenschutz ausschalten; dann wird nichts gesendet.",
+              "<strong>Automatische Google-Drive-Sicherung (freiwillig):</strong> anfangs ausgeschaltet. Meldet sich ein Elternteil mit Google an und schaltet sie ein („Mit Google fortfahren“ auf dem ersten Bildschirm oder Meine Kinder › Sichern &amp; exportieren), werden dieselben Inhalte wie in einer Sicherungsdatei – Angaben zum Kind, Kunstwerkfotos in Originalqualität, Sprachaufnahmen, Antworten und Worte des Kindes, Zitate, Notizen der Eltern und von der Familie erhaltene Bücher – in einen versteckten, App-eigenen Ordner im <strong>eigenen Google Drive der Eltern</strong> hochgeladen (Google-Berechtigung drive.appdata). Dieser Ordner ist in der Drive-Oberfläche nicht sichtbar und belegt nur Speicherplatz. Die App kann keine anderen Dateien in deinem Drive sehen. Die Daten gehen direkt zwischen Handy und Google Drive (Google LLC); sie laufen nicht über Server des Entwicklers und werden dort nicht gespeichert, der Entwickler kann sie also nicht sehen. Standardmäßig wird nur im WLAN und nur bei geöffneter App hochgeladen (ein Schalter erlaubt mobile Daten). In der App gelöschte Einträge werden beim nächsten Hochladen auch aus der Drive-Sicherung gelöscht. Die E-Mail-Adresse des angemeldeten Kontos wird nur auf diesem Handy gespeichert, um anzuzeigen, welches Konto verwendet wird.",
+              "<strong>Bereich für Lehrkräfte (freiwillig, für Kitas und Kunstschulen):</strong> Verbindet eine Lehrkraft das Google-Konto der Einrichtung, werden Gruppenname, Namen der Kinder und die fotografierten Kunstwerke mit Angebot und Notiz in das <strong>Google Drive dieses Einrichtungskontos</strong> hochgeladen (Google-Berechtigungen drive.file – nur von dieser App erstellte Dateien – und drive.appdata – Gruppenstand in einem versteckten Bereich). Fotos und Listen werden verschlüsselt (AES-256) hochgeladen und öffnen sich nur in der App der Eltern, die den Link des Kindes erhalten haben. Wer den Link hat, kann die verschlüsselten Dateien herunterladen, aber ohne den Schlüssel im Link nicht öffnen. Nichts läuft über Server des Entwicklers, der Entwickler kann es nicht sehen. Für die Einwilligung, Kinder zu fotografieren und die Fotos an die Eltern weiterzugeben, ist die Einrichtung verantwortlich. Im Drive der Einrichtung erscheinen Gruppen- und Einrichtungsname als Ordnernamen; der Ordner jedes Kindes trägt eine Nummer statt eines Namens. Der Gruppenstand mit Namen der Kinder und Schlüsseln liegt im versteckten, App-eigenen Bereich des Einrichtungskontos. Die E-Mail-Adresse des Einrichtungskontos wird nur auf diesem Handy gespeichert, um das verwendete Konto anzuzeigen. Fügt die Lehrkraft Gesichtsfotos der Kinder hinzu (freiwillig, um sie leichter zu erkennen), bleiben diese nur auf diesem Handy und werden weder in Drive hochgeladen noch an Eltern gesendet.",
+              "<strong>Mit Lehrkräften verbinden (freiwillig):</strong> Verbinden sich Eltern über den Link des Kindes, lädt die App bei jedem Öffnen die Liste dieses Links und neue Fotos ohne Anmeldung aus Google Drive und speichert sie auf diesem Handy. Nach dem Trennen kommt nichts Neues mehr; bereits erhaltene Werke lassen sich wie andere Einträge löschen. Gruppen- und Lehrkraftname, Angebot und Notiz werden ebenfalls auf diesem Handy gespeichert. Beim Herunterladen erhält Google wie bei jedem Download die Verbindungsdaten des Handys (IP-Adresse).",
+              "<strong>Kauf des Buch-PDFs:</strong> Google Play verarbeitet Zahlungsmittel und Abrechnung; der Entwickler erhält keine Kartendaten. Zur Nutzung eines Kaufs sendet die App das Kauftoken und eine namenlose Buchkennung über den Dear-Crayon-Prüfdienst (Cloudflare Workers) an Google Play. Zur Vermeidung doppelter Zuordnung und zur Besitzprüfung speichert der Dienst Buchkennung, Bestellnummer, Kaufzeit und Prüfzeit. Das eigentliche Kauftoken sowie Name, Geburtsdatum, Fotos und Stimme des Kindes werden dort nicht gespeichert. Das Kaufjournal bleibt auf diesem Handy und wird in elterliche Backups aufgenommen. Bestelldaten dienen Kaufprüfung, Erstattungen und Support.",
+              "<strong>Buch-PDF auf iOS kaufen:</strong> Der Apple App Store verarbeitet die Zahlungsmittel; der Entwickler erhält keine Kartendaten. Die App sendet eine von Apple signierte Transaktion und eine anonyme Buchkennung an einen separaten Apple-Prüfdienst auf Cloudflare Workers. Dieser prüft Apples Signatur sowie den aktuellen Kauf- und Erstattungsstatus und speichert Buchkennung, Transaktionsnummer und Kaufzeit gegen Mehrfachverwendung. Signierte Originaltransaktionen, Namen, Fotos und Sprachaufnahmen des Kindes werden dort nicht gespeichert. Kaufdaten sind in den von Eltern erstellten Sicherungen enthalten.",
+              "<strong>Dateien, die Eltern teilen:</strong> Monatskarten, Buch-PDFs, Buchdateien und Sicherungsdateien verlassen das Handy nur, wenn ein Elternteil sie über eine selbst gewählte App (Messenger, E-Mail usw.) sendet. Die Empfänger haben dann diese Datei.",
+              "Bestätigung der Elternverbindung: Wählt ein Elternteil über den Lehrkraft-Link ein Kind aus und schließt die Verbindung ab, werden ein separat abgeleiteter Bestätigungswert und der Bestätigungszeitpunkt in Cloudflare Workers KV gespeichert. Namen, Fotos, Sprachaufnahmen, Drive-Datei-IDs und Verschlüsselungsschlüssel werden weder übertragen noch gespeichert. Die historische Bestätigung kann nach einer Trennung erhalten bleiben; der aktuelle Verbindungsstatus wird nicht in Echtzeit verfolgt. Der Bestätigungsdatensatz wird ohne automatische Erneuerung aufbewahrt. Löschanfragen können an die unten genannte Adresse gesendet werden. Cloudflare erhält bei der Verarbeitung Verbindungsinformationen."
+            ]
+          ]
+        ]
+      ],
+      [
+        "3. Berechtigungen",
+        [
+          [
+            "ul",
+            [
+              "Kamera: zum Fotografieren der Kunstwerke.",
+              "Mikrofon: zum Aufnehmen der Stimme des Kindes.",
+              "Benachrichtigungen: Erinnerungen an Monatsgeschichten und Geburtstage. Lehnst du ab, funktioniert alles andere weiter."
+            ]
+          ]
+        ]
+      ],
+      [
+        "4. Speicherdauer und Löschen",
+        [
+          [
+            "ul",
+            [
+              "Einträge bleiben auf diesem Handy, bis ein Elternteil sie löscht. Ist die automatische Google-Drive-Sicherung eingeschaltet, bleibt auch die Drive-Sicherung im Google-Konto der Eltern, bis sie gelöscht wird.",
+              "Kunstwerke, Antworten und Zitate lassen sich in der App einzeln löschen; wird ein Kind gelöscht, werden alle seine Einträge und Dateien gelöscht.",
+              "Wird die App gelöscht, sind alle Einträge auf diesem Handy gelöscht. Die Drive-Sicherung bleibt auch nach dem Löschen der App bestehen; lösche sie wie unten beschrieben. Sicherungen und geteilte Dateien löschst du bitte selbst dort, wo du sie gespeichert hast.",
+              "<strong>Drive-Sicherung löschen:</strong> „Konto trennen“ meldet dich ab und stoppt das Hochladen, lässt die Sicherung in Drive aber bestehen. Mit <strong>Sicherung aus Drive löschen</strong> in der App wird die gesamte Drive-Sicherung gelöscht. Ohne App geht es unter Google Drive › Einstellungen › Apps verwalten › Dear Crayon › Versteckte App-Daten löschen; den Zugriff entziehst du unter Google-Konto › Sicherheit › Drittanbieter-Apps.",
+              "Die Einträge des Kindes liegen nicht auf einem Entwicklerserver; Eltern können ihr Drive-Backup selbst löschen. Fragen oder Löschanfragen zu gesondert gespeicherten Kaufprüfdaten bitte an den Kontakt unten richten. Ihre Löschung kann die Besitzprüfung und den Support einschränken."
+            ]
+          ]
+        ]
+      ],
+      [
+        "5. Datenschutz für Kinder",
+        [
+          [
+            "ul",
+            [
+              "Gemäß DSGVO (Kinder), COPPA (USA) und dem koreanischen Datenschutzgesetz bitten wir um die Einwilligung eines Elternteils, bevor die Stimme des Kindes an einen Server gesendet wird. Auch die automatische Google-Drive-Sicherung läuft nur, wenn ein Elternteil sich anmeldet und sie einschaltet.",
+              "Eltern können die Angaben zum Kind jederzeit direkt in der App ansehen, berichtigen oder löschen und ihre Einwilligung widerrufen."
+            ]
+          ]
+        ]
+      ],
+      [
+        "6. Kontakt",
+        [
+          [
+            "ul",
+            [
+              "Anbieter: Planar Figure",
+              "E-Mail: planarfigure@gmail.com",
+              "Web: <a href=\"https://hype-boy8.github.io/dearcrayon-legal/de/privacy.html\">https://hype-boy8.github.io/dearcrayon-legal/de/privacy.html</a>"
+            ]
+          ]
+        ]
+      ]
+    ],
+    "closing": "Ändert sich diese Erklärung, aktualisieren wir das Datum in der App und auf dieser Seite."
+  },
+  "fr": {
+    "intro": "Dear Crayon est une application destinée aux parents pour garder les dessins et la voix de leur enfant. Elle n’est pas conçue pour être utilisée seule par un enfant ; un parent (représentant légal) saisit et gère les informations de l’enfant.",
+    "mdEffective": "En vigueur le : 23 octobre 2026",
+    "sections": [
+      [
+        "1. Ce que nous traitons et où c’est conservé",
+        [
+          [
+            "ul",
+            [
+              "Prénom, date de naissance, nom d’artiste et photo de profil de l’enfant ; photos des œuvres ; enregistrements de la voix de l’enfant ; ce que l’enfant a dit et répondu ; citations ; notes des parents ; réglages de l’application.",
+              "Les souvenirs de l’enfant restent dans le stockage de l’app sur ce téléphone, et dans le Google Drive du parent seulement si la sauvegarde est activée. Il n’y a pas d’inscription à l’app. Le développeur ne reçoit ni ne stocke ces souvenirs sur un serveur. La connexion Google sert à la sauvegarde Drive. Les données de vérification d’achat sont décrites séparément ci-dessous.",
+              "Nous n’utilisons ni publicité, ni mesure d’audience, ni localisation.",
+              "La sauvegarde automatique du système Android est désactivée. L’application propose deux sauvegardes : des fichiers (zip) créés par un parent, et la sauvegarde automatique Google Drive, facultative, qu’un parent active (désactivée par défaut).",
+              "Sur iOS, les sauvegardes de l’appareil suivent vos réglages iCloud ou Finder. L’app ne propose pas de synchronisation iCloud distincte."
+            ]
+          ]
+        ]
+      ],
+      [
+        "2. Quand quelque chose quitte le téléphone",
+        [
+          [
+            "ul",
+            [
+              "<strong>Voix en texte (facultatif) :</strong> uniquement si un parent l’autorise lors du premier enregistrement, l’enregistrement à transcrire et le réglage de langue sont envoyés au serveur relais de Dear Crayon (Cloudflare Workers). Le serveur relais fait produire le texte par Cloudflare Workers AI (reconnaissance vocale Whisper, Cloudflare, Inc., États-Unis), le renvoie, et ne conserve ni l’enregistrement ni le texte. Aucune autre donnée, comme le prénom de l’enfant, n’est envoyée. Vous pouvez désactiver cette fonction à tout moment dans Réglages › Confidentialité ; rien n’est alors envoyé.",
+              "<strong>Sauvegarde automatique Google Drive (facultative) :</strong> désactivée par défaut. Si un parent se connecte avec Google et l’active (« Continuer avec Google » sur le premier écran, ou Mes enfants › Sauvegarde et export), le même contenu qu’un fichier de sauvegarde — infos de l’enfant, photos des œuvres en qualité d’origine, enregistrements de voix, réponses et mots de l’enfant, citations, notes des parents et livres reçus de la famille — est envoyé dans un dossier caché, réservé à l’application, dans <strong>le propre Google Drive du parent</strong> (autorisation Google drive.appdata). Ce dossier n’apparaît pas dans l’interface de Drive ; il utilise seulement de l’espace de stockage. L’application ne peut voir aucun autre fichier de votre Drive. Les données vont directement du téléphone à Google Drive (Google LLC) ; elles ne passent par aucun serveur du développeur et n’y sont pas conservées, le développeur ne peut donc pas les voir. Par défaut, l’envoi se fait uniquement en Wi‑Fi et seulement quand l’application est ouverte (un bouton permet les données mobiles). Les éléments supprimés dans l’application sont aussi supprimés de la sauvegarde Drive au prochain envoi. L’adresse e-mail du compte connecté est conservée uniquement sur ce téléphone, pour indiquer quel compte est utilisé.",
+              "<strong>Espace enseignant (facultatif, pour crèches et ateliers d’art) :</strong> si un·e enseignant·e relie le compte Google de l’établissement, le nom de la classe, les prénoms des enfants et les photos d’œuvres prises, avec l’activité et le mot de l’enseignant·e, sont envoyés dans <strong>le Google Drive de ce compte d’établissement</strong> (autorisations Google drive.file — uniquement les fichiers créés par l’application — et drive.appdata — état de la classe dans un espace caché). Photos et listes sont envoyées verrouillées (AES-256) et ne s’ouvrent que dans l’application des parents qui ont reçu le lien de l’enfant. Toute personne ayant le lien peut télécharger les fichiers verrouillés, mais pas les ouvrir sans la clé contenue dans le lien. Rien ne passe par un serveur du développeur, qui ne peut donc rien voir. Le consentement pour photographier les enfants et transmettre les photos aux parents relève de l’établissement. Dans le Drive de l’établissement, les noms de la classe et de l’établissement apparaissent comme noms de dossiers ; le dossier de chaque enfant porte un numéro et non un prénom. L’état de la classe, avec les prénoms et les clés, est conservé dans l’espace caché réservé à l’application du compte de l’établissement. L’adresse e-mail du compte de l’établissement est conservée uniquement sur ce téléphone, pour indiquer quel compte est utilisé. Si l’enseignant·e ajoute des photos du visage des enfants (facultatif, pour les reconnaître plus facilement), elles restent uniquement sur ce téléphone et ne sont jamais envoyées dans Drive ni aux parents.",
+              "<strong>Se relier aux enseignants (facultatif) :</strong> si un parent se relie avec le lien de l’enfant envoyé par l’enseignant·e, l’application télécharge à chaque ouverture la liste de ce lien et les nouvelles photos depuis Google Drive, sans connexion, et les enregistre sur ce téléphone. Après déconnexion, plus rien n’arrive ; les œuvres reçues se suppriment comme les autres souvenirs. Le nom de la classe et de l’enseignant·e, l’activité et son mot sont aussi enregistrés sur ce téléphone. Lors du téléchargement, Google reçoit, comme pour tout téléchargement, les informations de connexion du téléphone (adresse IP).",
+              "<strong>Achat du PDF du livre :</strong> Google Play traite les moyens de paiement et la facturation ; le développeur ne reçoit aucune donnée de carte. Pour utiliser un achat, l’app envoie le jeton d’achat et un identifiant de livre sans nom à Google Play via le service de vérification Dear Crayon (Cloudflare Workers). Pour éviter une double attribution et confirmer la possession, le service conserve l’identifiant du livre, le numéro de commande, la date d’achat et la date de vérification. Il ne conserve ni le jeton brut ni le nom, la date de naissance, les photos ou la voix de l’enfant. Le journal d’achat reste sur ce téléphone et fait partie des sauvegardes du parent. Les commandes servent à la vérification, aux remboursements et à l’assistance.",
+              "<strong>Achat du PDF sur iOS :</strong> Apple App Store gère les moyens de paiement ; le développeur ne reçoit aucune donnée de carte. L’app envoie une transaction signée par Apple et un identifiant anonyme du livre à un service de vérification Apple distinct sur Cloudflare Workers. Ce service vérifie la signature et l’état actuel de l’achat et des remboursements, puis conserve l’identifiant du livre, le numéro de transaction et la date d’achat pour éviter les réutilisations. Il ne conserve ni la transaction signée brute ni les noms, photos ou voix des enfants. Les achats figurent dans les sauvegardes créées par les parents.",
+              "<strong>Fichiers partagés par un parent :</strong> les cartes du mois, PDF des livres, fichiers de livre et sauvegardes ne quittent le téléphone que lorsqu’un parent les envoie via l’application de son choix (messagerie, e-mail, etc.). Le destinataire dispose alors de ce fichier.",
+              "Confirmation de la connexion du parent : Quand un parent choisit un enfant et termine la connexion via le lien de l’enseignant, une valeur de confirmation dérivée séparément et sa date sont conservées dans Cloudflare Workers KV pour consultation par l’enseignant. Aucun nom, photo, enregistrement vocal, identifiant de fichier Drive ou clé de chiffrement du lien n’est transmis ni conservé. Cette confirmation passée peut subsister après une déconnexion ; la présence et la déconnexion ne sont pas suivies en temps réel. Le relevé est conservé sans renouvellement automatique. Pour demander sa suppression, contactez-nous ci-dessous. Cloudflare reçoit des informations de connexion lors du traitement des requêtes."
+            ]
+          ]
+        ]
+      ],
+      [
+        "3. Autorisations du téléphone",
+        [
+          [
+            "ul",
+            [
+              "Appareil photo : pour photographier les œuvres.",
+              "Micro : pour enregistrer la voix de l’enfant.",
+              "Notifications : rappels des histoires du mois et des anniversaires. Tout le reste fonctionne si vous refusez."
+            ]
+          ]
+        ]
+      ],
+      [
+        "4. Durée de conservation et suppression",
+        [
+          [
+            "ul",
+            [
+              "Les données restent sur ce téléphone jusqu’à ce qu’un parent les supprime. Si la sauvegarde automatique Google Drive est activée, la sauvegarde Drive reste aussi dans le compte Google du parent jusqu’à ce qu’il la supprime.",
+              "Les œuvres, réponses et citations peuvent être supprimées une par une dans l’application ; supprimer un enfant efface toutes ses données et tous ses fichiers.",
+              "Supprimer l’application efface toutes les données de ce téléphone. La sauvegarde Drive reste même après la suppression de l’application : supprimez-la comme indiqué ci-dessous. Supprimez vous-même les sauvegardes et fichiers partagés là où vous les avez enregistrés.",
+              "<strong>Supprimer la sauvegarde Drive :</strong> « Déconnecter le compte » vous déconnecte et arrête les envois, mais laisse la sauvegarde dans Drive. <strong>Supprimer la sauvegarde de Drive</strong> dans l’application efface toute la sauvegarde Drive. Sans l’application, vous pouvez la supprimer dans Google Drive › Paramètres › Gérer les applications › Dear Crayon › Supprimer les données d’application masquées, et retirer l’accès dans Compte Google › Sécurité › Applications tierces.",
+              "Les souvenirs de l’enfant ne sont pas sur un serveur du développeur ; les parents peuvent supprimer leur sauvegarde Drive. Pour toute question ou demande de suppression concernant les données distinctes de vérification d’achat, contactez-nous ci-dessous. Leur suppression peut limiter la confirmation de possession et l’assistance."
+            ]
+          ]
+        ]
+      ],
+      [
+        "5. Protection des données des enfants",
+        [
+          [
+            "ul",
+            [
+              "Conformément au RGPD (enfants), au COPPA (États-Unis) et à la loi coréenne sur la protection des données personnelles, nous demandons le consentement d’un parent avant d’envoyer la voix de l’enfant à un serveur. La sauvegarde automatique Google Drive ne fonctionne elle aussi que si un parent se connecte et l’active.",
+              "Les parents peuvent à tout moment consulter, corriger ou supprimer les informations de l’enfant et retirer leur consentement, directement dans l’application."
+            ]
+          ]
+        ]
+      ],
+      [
+        "6. Contact",
+        [
+          [
+            "ul",
+            [
+              "Éditeur : Planar Figure",
+              "E-mail : planarfigure@gmail.com",
+              "Web : <a href=\"https://hype-boy8.github.io/dearcrayon-legal/fr/privacy.html\">https://hype-boy8.github.io/dearcrayon-legal/fr/privacy.html</a>"
+            ]
+          ]
+        ]
+      ]
+    ],
+    "closing": "Si cette politique change, nous mettrons à jour la date d’entrée en vigueur dans l’application et sur cette page."
+  },
+  "es": {
+    "intro": "Dear Crayon es una app para que madres y padres guarden los dibujos y la voz de sus hijos. No está pensada para que los niños la usen solos; un adulto (representante legal) introduce y gestiona la información del niño.",
+    "mdEffective": "Vigente desde: 23 de octubre de 2026",
+    "sections": [
+      [
+        "1. Qué tratamos y dónde se guarda",
+        [
+          [
+            "ul",
+            [
+              "Nombre, fecha de nacimiento, nombre de artista y foto de perfil del niño; fotos de las obras; grabaciones de su voz; lo que dijo y respondió; frases; notas de los padres; ajustes de la app.",
+              "Los recuerdos del peque permanecen en el almacenamiento de la app en este móvil y, solo si se activa la copia, en el Google Drive del adulto. No hay registro en la app. El desarrollador no recibe ni almacena esos recuerdos en un servidor. El inicio de sesión de Google se usa para la copia de Drive. Los datos de verificación de compras se describen aparte más abajo.",
+              "No usamos publicidad, análisis de uso ni ubicación.",
+              "La copia de seguridad automática del sistema Android está desactivada. La app ofrece dos tipos de copia: archivos (zip) que crea un adulto y la copia de seguridad automática en Google Drive, opcional, que activa un adulto (viene desactivada).",
+              "En iOS, las copias del dispositivo siguen tus ajustes de iCloud o Finder. La app no ofrece una sincronización independiente con iCloud."
+            ]
+          ]
+        ]
+      ],
+      [
+        "2. Cuándo sale algo del móvil",
+        [
+          [
+            "ul",
+            [
+              "<strong>Voz a texto (opcional):</strong> solo si un adulto lo permite en la primera grabación, la grabación que se va a transcribir y el ajuste de idioma se envían al servidor intermediario de Dear Crayon (Cloudflare Workers). El servidor intermediario obtiene el texto de Cloudflare Workers AI (reconocimiento de voz Whisper, Cloudflare, Inc., Estados Unidos), lo devuelve y no guarda ni la grabación ni el texto. No se envía ningún otro dato, como el nombre del niño. Puedes desactivarlo cuando quieras en Ajustes › Privacidad; entonces no se envía nada.",
+              "<strong>Copia de seguridad automática en Google Drive (opcional):</strong> viene desactivada. Si un adulto inicia sesión con Google y la activa («Continuar con Google» en la primera pantalla, o Mis peques › Copia y exportación), el mismo contenido que un archivo de copia —datos del niño, fotos de las obras en calidad original, grabaciones de voz, respuestas y palabras del niño, frases, notas de los padres y libros recibidos de la familia— se sube a una carpeta oculta y exclusiva de la app en <strong>el propio Google Drive del adulto</strong> (permiso de Google drive.appdata). Esta carpeta no aparece en la interfaz de Drive; solo ocupa espacio de almacenamiento. La app no puede ver ningún otro archivo de tu Drive. Los datos van directamente entre el móvil y Google Drive (Google LLC); no pasan por ningún servidor del desarrollador ni se guardan en él, así que el desarrollador no puede verlos. Por defecto solo se sube con Wi‑Fi y solo con la app abierta (un interruptor permite usar datos móviles). Lo que se borra en la app también se borra de la copia en Drive en la siguiente subida. El correo de la cuenta con la que se inició sesión se guarda solo en este móvil, para mostrar qué cuenta se usa.",
+              "<strong>Espacio docente (opcional, para guarderías y talleres de arte):</strong> si un docente conecta la cuenta de Google del centro, el nombre de la clase, los nombres de los niños y las fotos de las obras que toma, con la actividad y su nota, se suben al <strong>Google Drive de esa cuenta del centro</strong> (permisos de Google drive.file —solo archivos creados por esta app— y drive.appdata —estado de la clase en un espacio oculto—). Las fotos y listas se suben cifradas (AES-256) y solo se abren en la app de las familias que recibieron el enlace del niño. Quien tenga el enlace puede descargar los archivos cifrados, pero no abrirlos sin la clave incluida en el enlace. Nada pasa por servidores del desarrollador, que no puede verlo. El consentimiento para fotografiar a los niños y compartir las fotos con sus familias corresponde al centro. En el Drive del centro, los nombres de la clase y del centro aparecen como nombres de carpetas; la carpeta de cada niño lleva un número en lugar de su nombre. El estado de la clase, con los nombres y las claves, se guarda en el espacio oculto exclusivo de la app de la cuenta del centro. El correo de la cuenta del centro se guarda solo en este móvil, para mostrar qué cuenta se usa. Si el docente añade fotos de la cara de los peques (opcional, para reconocerlos mejor), esas fotos se quedan solo en este móvil y nunca se suben a Drive ni se envían a las familias.",
+              "<strong>Conectar con docentes (opcional):</strong> si una familia se conecta con el enlace del niño que envió el docente, la app descarga cada vez que se abre la lista de ese enlace y las fotos nuevas desde Google Drive, sin iniciar sesión, y las guarda en este móvil. Al desconectar ya no llega nada nuevo; las obras recibidas se pueden borrar como cualquier otro recuerdo. El nombre de la clase y del docente, la actividad y su nota también se guardan en este móvil. Al descargar, Google recibe, como en cualquier descarga, los datos de conexión del móvil (dirección IP).",
+              "<strong>Compra del PDF del libro:</strong> Google Play gestiona el pago y la facturación; el desarrollador no recibe datos de tarjetas. Para usar una compra, la app envía el token de compra y un identificador de libro sin nombres a Google Play a través del servicio de verificación de Dear Crayon (Cloudflare Workers). Para evitar asignaciones duplicadas y confirmar la propiedad, el servicio guarda el identificador del libro, número de pedido, fecha de compra y fecha de comprobación. No guarda el token original ni el nombre, fecha de nacimiento, fotos o voz del peque. El registro de compra permanece en este móvil y se incluye en las copias del adulto. Los datos de pedido se usan para verificación, reembolsos y asistencia.",
+              "<strong>Compra del PDF en iOS:</strong> Apple App Store gestiona los medios de pago; el desarrollador no recibe datos de tarjetas. La app envía una transacción firmada por Apple y un identificador anónimo del libro a un servicio de verificación Apple separado en Cloudflare Workers. Comprueba la firma y el estado actual de la compra y sus reembolsos, y guarda el identificador del libro, el número de transacción y la fecha de compra para evitar usos repetidos. No guarda la transacción firmada original ni nombres, fotos o voces de niños en ese registro. Los datos de compra se incluyen en las copias creadas por los padres.",
+              "<strong>Archivos que comparten los padres:</strong> las tarjetas del mes, los PDF de los libros, los archivos de libro y las copias de seguridad solo salen del móvil cuando un adulto los envía con la app que elija (mensajería, correo, etc.). Quien los recibe tendrá ese archivo.",
+              "Confirmación de conexión familiar: Cuando un familiar elige un niño y completa la conexión mediante el enlace del docente, se guardan un valor de confirmación derivado por separado y su fecha en Cloudflare Workers KV para que el docente los consulte. No se envían ni guardan nombres, fotos, grabaciones, identificadores de archivos de Drive ni claves de cifrado del enlace. La confirmación histórica puede permanecer tras desconectarse; no se rastrean la presencia ni la desconexión en tiempo real. El registro se conserva sin renovaciones automáticas. Para solicitar su eliminación, usa el contacto de abajo. Cloudflare recibe información de conexión al procesar las solicitudes."
+            ]
+          ]
+        ]
+      ],
+      [
+        "3. Permisos del móvil",
+        [
+          [
+            "ul",
+            [
+              "Cámara: para fotografiar las obras.",
+              "Micrófono: para grabar la voz del niño.",
+              "Notificaciones: recordatorios de las historias del mes y de los cumpleaños. Si los rechazas, todo lo demás sigue funcionando."
+            ]
+          ]
+        ]
+      ],
+      [
+        "4. Conservación y borrado",
+        [
+          [
+            "ul",
+            [
+              "Los registros permanecen en este móvil hasta que un adulto los borra. Si la copia de seguridad automática en Google Drive está activada, la copia en Drive también permanece en la cuenta de Google del adulto hasta que la borre.",
+              "Las obras, respuestas y frases se pueden borrar una a una en la app; al borrar a un niño se borran todos sus registros y archivos.",
+              "Al borrar la app se borran todos los registros de este móvil. La copia en Drive se mantiene aunque borres la app, así que bórrala como se explica abajo. Borra tú las copias de seguridad y los archivos compartidos allí donde los guardaste.",
+              "<strong>Borrar la copia en Drive:</strong> «Desconectar cuenta» cierra la sesión y detiene las subidas, pero deja la copia en Drive. <strong>Borrar la copia de Drive</strong> en la app borra toda la copia en Drive. Sin la app, puedes borrarla en Google Drive › Configuración › Gestionar aplicaciones › Dear Crayon › Eliminar datos ocultos de la aplicación, y retirar el acceso en Cuenta de Google › Seguridad › Aplicaciones de terceros.",
+              "Los recuerdos del peque no están en servidores del desarrollador; los padres pueden borrar su copia de Drive. Para consultas o solicitudes de borrado de los datos de verificación de compras que se guardan aparte, contacta con nosotros más abajo. Borrarlos puede limitar la comprobación de propiedad y la asistencia."
+            ]
+          ]
+        ]
+      ],
+      [
+        "5. Privacidad de los niños",
+        [
+          [
+            "ul",
+            [
+              "De acuerdo con el RGPD (menores), la COPPA (EE. UU.) y la ley coreana de protección de datos personales, pedimos el consentimiento de un adulto antes de enviar la voz del niño a un servidor. La copia de seguridad automática en Google Drive también funciona solo si un adulto inicia sesión y la activa.",
+              "Los padres pueden ver, corregir o borrar la información del niño y retirar su consentimiento en cualquier momento, directamente en la app."
+            ]
+          ]
+        ]
+      ],
+      [
+        "6. Contacto",
+        [
+          [
+            "ul",
+            [
+              "Responsable: Planar Figure",
+              "Correo: planarfigure@gmail.com",
+              "Web: <a href=\"https://hype-boy8.github.io/dearcrayon-legal/es/privacy.html\">https://hype-boy8.github.io/dearcrayon-legal/es/privacy.html</a>"
+            ]
+          ]
+        ]
+      ]
+    ],
+    "closing": "Si esta política cambia, actualizaremos la fecha de vigencia en la app y en esta página."
+  }
+}
