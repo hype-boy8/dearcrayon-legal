@@ -1090,12 +1090,12 @@ for _lang, _policy in _APP_POLICIES.items():
     _delete_sections[-1] = (_delete_sections[-1][0], [('p', _retention), ('p', MAIL)])
 
 _IOS_DELETE = {
- 'ko': '<strong>iPhone·iPad:</strong> 설정 › 일반 › iPhone(iPad) 저장 공간 › Dear Crayon › 앱 삭제에서 앱 데이터를 지울 수 있어요. ‘앱 정리하기’는 데이터를 남겨요. iCloud·Finder 기기 백업과 직접 만든 백업 파일은 보관한 곳에서 별도로 관리해 주세요.',
- 'en': '<strong>iPhone and iPad:</strong> go to Settings › General › iPhone (iPad) Storage › Dear Crayon › Delete App to remove app data. Offload App keeps the data. Manage iCloud/Finder device backups and your own backup files separately where you saved them.',
- 'ja': '<strong>iPhone・iPad:</strong> 設定 › 一般 › iPhone（iPad）ストレージ › Dear Crayon › アプリを削除でデータを削除できます。「アプリを取り除く」ではデータが残ります。iCloud・Finderのデバイスバックアップと自分で作成したバックアップは、保存先で別途管理してください。',
- 'de': '<strong>iPhone und iPad:</strong> Einstellungen › Allgemein › iPhone-(iPad-)Speicher › Dear Crayon › App löschen entfernt die App-Daten. „App auslagern“ behält die Daten. Verwalte iCloud-/Finder-Gerätebackups und eigene Sicherungsdateien separat am jeweiligen Speicherort.',
- 'fr': '<strong>iPhone et iPad :</strong> Réglages › Général › Stockage iPhone (iPad) › Dear Crayon › Supprimer l’app efface les données. « Décharger l’app » conserve les données. Gérez séparément les sauvegardes de l’appareil iCloud/Finder et vos propres fichiers à leur emplacement.',
- 'es': '<strong>iPhone y iPad:</strong> Ajustes › General › Almacenamiento del iPhone (iPad) › Dear Crayon › Eliminar app borra los datos. « Desinstalar app » conserva los datos. Gestiona por separado las copias del dispositivo en iCloud/Finder y tus archivos de copia donde los guardaste.',
+ 'ko': '<strong>iPhone:</strong> 설정 › 일반 › iPhone 저장 공간 › Dear Crayon › 앱 삭제에서 앱 데이터를 지울 수 있어요. ‘앱 정리하기’는 데이터를 남겨요. 앱 기록은 iCloud·Finder 기기 백업에 들어가지 않아요. 직접 만든 백업 파일은 보관한 곳에서 별도로 지워 주세요.',
+ 'en': '<strong>iPhone:</strong> go to Settings › General › iPhone Storage › Dear Crayon › Delete App to remove app data. Offload App keeps the data. App records are not included in iCloud/Finder device backups. Delete your own backup files separately where you saved them.',
+ 'ja': '<strong>iPhone:</strong> 設定 › 一般 › iPhoneストレージ › Dear Crayon › アプリを削除でデータを削除できます。「アプリを取り除く」ではデータが残ります。アプリの記録はiCloud・Finderのデバイスバックアップに含まれません。自分で作成したバックアップは、保存先で別途削除してください。',
+ 'de': '<strong>iPhone:</strong> Einstellungen › Allgemein › iPhone-Speicher › Dear Crayon › App löschen entfernt die App-Daten. „App auslagern“ behält die Daten. App-Daten sind nicht in iCloud-/Finder-Gerätebackups enthalten. Löschen Sie eigene Sicherungsdateien separat am jeweiligen Speicherort.',
+ 'fr': '<strong>iPhone :</strong> Réglages › Général › Stockage iPhone › Dear Crayon › Supprimer l’app efface les données. « Décharger l’app » conserve les données. Les données de l’app ne sont pas incluses dans les sauvegardes iCloud/Finder de l’appareil. Supprimez séparément vos propres fichiers de sauvegarde à leur emplacement.',
+ 'es': '<strong>iPhone:</strong> Ajustes › General › Almacenamiento del iPhone › Dear Crayon › Eliminar app borra los datos. « Desinstalar app » conserva los datos. Los datos de la app no se incluyen en las copias del dispositivo en iCloud/Finder. Borra por separado tus archivos de copia donde los guardaste.',
 }
 for _lang, _note in _IOS_DELETE.items():
     L[_lang]['delete']['sections'][3][1].append(('p', _note))

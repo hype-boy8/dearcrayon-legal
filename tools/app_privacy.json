@@ -13,7 +13,7 @@
               "아이의 기록은 이 휴대폰의 앱 저장소에 있고, 자동 백업을 켠 경우에만 부모 본인의 구글 드라이브에도 저장돼요. 회원 가입은 없고, 개발자는 아이의 기록을 받거나 서버에 저장하지 않아요. 구글 로그인은 드라이브 백업에 써요. 구매 확인용 정보는 아래에서 따로 설명해요.",
               "광고, 사용 분석, 위치 정보를 쓰지 않아요.",
               "안드로이드 시스템 자동 백업은 꺼져 있어요. 앱 안의 백업은 부모가 직접 만드는 파일(zip)과, 부모가 켜는 선택 기능인 구글 드라이브 자동 백업(처음엔 꺼져 있어요) 두 가지예요.",
-              "iOS의 기기 백업은 사용자가 설정한 iCloud·Finder 백업 설정을 따라요. 앱이 별도로 iCloud 동기화를 제공하는 것은 아니에요."
+              "iPhone에서도 아이 기록(사진 · 목소리 · 글)은 iCloud · Finder 기기 백업에 넣지 않아요. 옮기거나 지키려면 앱의 파일 백업이나 Google Drive 백업을 써 주세요."
             ]
           ]
         ]
@@ -106,7 +106,7 @@
               "Child records stay in this phone’s app storage, and in the parent’s own Google Drive only if auto backup is enabled. There is no app registration; the developer does not receive or store these child records on a server. Google sign-in is used for Drive backup. Purchase verification data is described separately below.",
               "We do not use advertising, usage analytics or location.",
               "Android’s system Auto Backup is turned off. The app offers two kinds of backup: files (zip) that a parent creates, and the optional Google Drive auto backup that a parent turns on (off by default).",
-              "On iOS, device backups follow your iCloud or Finder settings. The app does not separately provide iCloud synchronization."
+              "On iPhone, your child’s records (photos, voice and text) are excluded from iCloud and Finder device backups. To move or protect them, use the app’s file backup or Google Drive backup."
             ]
           ]
         ]
@@ -199,7 +199,7 @@
               "子どもの記録はこのスマートフォンのアプリ内に保存され、自動バックアップを有効にした場合のみ保護者自身の Google ドライブにも保存されます。会員登録はなく、開発者は子どもの記録を受け取ったりサーバーに保存したりしません。Google ログインはドライブのバックアップに使用します。購入確認の情報は下で別に説明します。",
               "広告、利用分析、位置情報は使いません。",
               "Android システムの自動バックアップはオフにしています。アプリ内のバックアップは、親が自分で作るファイル(zip)と、親がオンにする任意の Google ドライブ自動バックアップ(最初はオフ)の2つです。",
-              "iOSの端末バックアップは、お使いのiCloud・Finderの設定に従います。アプリ独自のiCloud同期機能はありません。"
+              "iPhoneでも、お子さまの記録（写真・声・文章）はiCloud・Finderの端末バックアップに含めません。移行や保管には、アプリのファイルバックアップかGoogle ドライブのバックアップをお使いください。"
             ]
           ]
         ]
@@ -292,7 +292,7 @@
               "Die Einträge des Kindes bleiben im App-Speicher dieses Handys und nur bei aktivierter Sicherung zusätzlich im eigenen Google Drive der Eltern. Es gibt keine App-Registrierung. Der Entwickler erhält diese Einträge nicht und speichert sie nicht auf einem Server. Die Google-Anmeldung dient der Drive-Sicherung. Kaufprüfdaten werden unten gesondert beschrieben.",
               "Wir verwenden keine Werbung, keine Nutzungsanalyse und keinen Standort.",
               "Die automatische Systemsicherung von Android ist ausgeschaltet. Die App bietet zwei Arten der Sicherung: Dateien (zip), die ein Elternteil selbst erstellt, und die freiwillige automatische Google-Drive-Sicherung, die ein Elternteil einschaltet (anfangs aus).",
-              "Auf iOS richten sich Gerätesicherungen nach deinen iCloud- oder Finder-Einstellungen. Die App bietet keine eigene iCloud-Synchronisierung."
+              "Auf dem iPhone sind die Aufzeichnungen Ihres Kindes (Fotos, Stimme, Text) von iCloud- und Finder-Gerätesicherungen ausgenommen. Zum Übertragen oder Sichern nutzen Sie bitte die Dateisicherung der App oder die Google-Drive-Sicherung."
             ]
           ]
         ]
@@ -385,7 +385,7 @@
               "Les souvenirs de l’enfant restent dans le stockage de l’app sur ce téléphone, et dans le Google Drive du parent seulement si la sauvegarde est activée. Il n’y a pas d’inscription à l’app. Le développeur ne reçoit ni ne stocke ces souvenirs sur un serveur. La connexion Google sert à la sauvegarde Drive. Les données de vérification d’achat sont décrites séparément ci-dessous.",
               "Nous n’utilisons ni publicité, ni mesure d’audience, ni localisation.",
               "La sauvegarde automatique du système Android est désactivée. L’application propose deux sauvegardes : des fichiers (zip) créés par un parent, et la sauvegarde automatique Google Drive, facultative, qu’un parent active (désactivée par défaut).",
-              "Sur iOS, les sauvegardes de l’appareil suivent vos réglages iCloud ou Finder. L’app ne propose pas de synchronisation iCloud distincte."
+              "Sur iPhone, les données de votre enfant (photos, voix, textes) sont exclues des sauvegardes de l’appareil iCloud et Finder. Pour les transférer ou les protéger, utilisez la sauvegarde par fichier de l’app ou la sauvegarde Google Drive."
             ]
           ]
         ]
@@ -478,7 +478,7 @@
               "Los recuerdos del peque permanecen en el almacenamiento de la app en este móvil y, solo si se activa la copia, en el Google Drive del adulto. No hay registro en la app. El desarrollador no recibe ni almacena esos recuerdos en un servidor. El inicio de sesión de Google se usa para la copia de Drive. Los datos de verificación de compras se describen aparte más abajo.",
               "No usamos publicidad, análisis de uso ni ubicación.",
               "La copia de seguridad automática del sistema Android está desactivada. La app ofrece dos tipos de copia: archivos (zip) que crea un adulto y la copia de seguridad automática en Google Drive, opcional, que activa un adulto (viene desactivada).",
-              "En iOS, las copias del dispositivo siguen tus ajustes de iCloud o Finder. La app no ofrece una sincronización independiente con iCloud."
+              "En el iPhone, los registros de tu peque (fotos, voz y textos) quedan fuera de las copias del dispositivo en iCloud y Finder. Para trasladarlos o protegerlos, usa la copia en archivo de la app o la copia en Google Drive."
             ]
           ]
         ]
