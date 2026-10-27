@@ -44,6 +44,7 @@
             [
               "카메라: 작품 사진을 찍을 때.",
               "마이크: 아이 목소리를 녹음할 때.",
+              "사진: 갤러리에서 작품 · 프로필 사진을 고를 때, 카드 · 도록을 사진 앱에 저장할 때.",
               "알림: 매달 이야기 · 생일 알림. 거절해도 나머지 기능은 그대로 쓸 수 있어요."
             ]
           ]
@@ -137,6 +138,7 @@
             [
               "Camera: to photograph artworks.",
               "Microphone: to record the child’s voice.",
+              "Photos: to choose artwork or a profile photo, and to save cards or book pages to your photos.",
               "Notifications: monthly story and birthday reminders. Everything else still works if you decline."
             ]
           ]
@@ -230,6 +232,7 @@
             [
               "カメラ: 作品の写真を撮るとき。",
               "マイク: 子どもの声を録音するとき。",
+              "写真: 作品やプロフィール写真を選ぶとき、カードや作品集を写真に保存するとき。",
               "通知: 毎月のおはなし・誕生日のお知らせ。許可しなくても、ほかの機能はそのまま使えます。"
             ]
           ]
@@ -323,6 +326,7 @@
             [
               "Kamera: zum Fotografieren der Kunstwerke.",
               "Mikrofon: zum Aufnehmen der Stimme des Kindes.",
+              "Fotos: zum Auswählen von Werken oder Profilfotos und zum Sichern von Karten oder Buchseiten in Fotos.",
               "Benachrichtigungen: Erinnerungen an Monatsgeschichten und Geburtstage. Lehnst du ab, funktioniert alles andere weiter."
             ]
           ]
@@ -416,6 +420,7 @@
             [
               "Appareil photo : pour photographier les œuvres.",
               "Micro : pour enregistrer la voix de l’enfant.",
+              "Photos : pour choisir une œuvre ou une photo de profil, et enregistrer des cartes ou pages du livre dans Photos.",
               "Notifications : rappels des histoires du mois et des anniversaires. Tout le reste fonctionne si vous refusez."
             ]
           ]
@@ -509,6 +514,7 @@
             [
               "Cámara: para fotografiar las obras.",
               "Micrófono: para grabar la voz del niño.",
+              "Fotos: para elegir obras o una foto de perfil, y guardar tarjetas o páginas del libro en Fotos.",
               "Notificaciones: recordatorios de las historias del mes y de los cumpleaños. Si los rechazas, todo lo demás sigue funcionando."
             ]
           ]
